@@ -1,0 +1,173 @@
+[
+  {
+    "slug": "como-organizar-categorias-blog",
+    "title": "Como organizar as categorias do blog para SEO",
+    "h1": "Como organizar as categorias do blog para SEO",
+    "summary": "Aprenda como estruturar categorias de blog de forma estratégica para melhorar SEO, navegação, autoridade e organização do conteúdo.",
+    "date": "2026-05-18",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/como-organizar-categorias-blog/como-organizar-categorias-do-blog.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Como organizar as categorias do blog para SEO"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "seo-em-migracao-de-sites",
+    "title": "SEO em migração de sites: guia para manter sua autoridade",
+    "h1": "Guia completo de SEO em migração de sites: como proteger sua autoridade",
+    "summary": "Evite perder tráfego ao trocar de site. Veja como aplicar SEO em migração de sites sem afetar sua autoridade e performance no Google.",
+    "date": "2025-09-04",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/seo-em-migracao-de-sites/seo-migracao-sites.webp",
+      "width": 950,
+      "height": 806,
+      "alt": "SEO em migração de sites: guia para manter sua autoridade"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "guia-seo-artigos-blog",
+    "title": "Guia de SEO para criação e publicação de artigos",
+    "h1": "Guia de SEO para criação e publicação de artigos",
+    "summary": "Aprenda como criar e publicar artigos otimizados para SEO com foco em ranqueamento, estratégia e experiência do usuário.",
+    "date": "2025-09-04",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/guia-seo-artigos-blog/guia-seo-artigos.webp",
+      "width": 1038,
+      "height": 690,
+      "alt": "Guia de SEO para criação e publicação de artigos"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "planilha-palavras-chave",
+    "title": "Como usar uma planilha de combinação de palavras-chave",
+    "h1": "Como uma planilha de combinação de palavras-chave potencializa seu SEO",
+    "summary": "Descubra como uma planilha estratégica de palavras-chave pode impulsionar seu SEO com combinações eficientes e foco em conversão.",
+    "date": "2025-09-04",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/planilha-palavras-chave/planilha-combinacao.webp",
+      "width": 1210,
+      "height": 764,
+      "alt": "Como usar uma planilha de combinação de palavras-chave"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "plano-conteudo-gmn",
+    "title": "Como postar no Google Meu Negócio: plano de conteúdo estratégico (passo a passo)",
+    "h1": "Como postar no Google Meu Negócio: plano de conteúdo estratégico passo a passo",
+    "summary": "Aprenda como criar e postar um plano de conteúdo estratégico no Google Meu Negócio para atrair mais clientes e melhorar o ranqueamento local.",
+    "date": "2025-08-22",
+    "category": "Perfil da Empresa no Google",
+    "categorySlug": "perfil-da-empresa-no-google",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/plano-conteudo-gmn/plano-conteudo-gmn-cover.webp",
+      "width": 832,
+      "height": 512,
+      "alt": "Como postar no Google Meu Negócio: plano de conteúdo estratégico (passo a passo)"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "seo-para-imagens",
+    "title": "SEO para imagens: práticas para subir arquivos otimizados",
+    "h1": "SEO para imagens: práticas para subir arquivos otimizados",
+    "summary": "Aprenda a otimizar nomes, alt text, peso e estrutura de imagens no CMS para melhorar ranqueamento, acessibilidade e desempenho do site.",
+    "date": "2025-08-12",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/seo-para-imagens/seo-imagens-otimizacao.webp",
+      "width": 1024,
+      "height": 576,
+      "alt": "SEO para imagens: práticas para subir arquivos otimizados"
+    },
+    "readingMinutes": 2,
+    "hasToc": true
+  },
+  {
+    "slug": "guia-hiperlink",
+    "title": "O que é hiperlink: guia prático com exemplos em HTML",
+    "h1": "O que é hiperlink: guia prático com exemplos em HTML",
+    "summary": "Aprenda o que é hiperlink, como criar links em HTML e descubra boas práticas de SEO com exemplos, atributos essenciais e dicas de acessibilidade.",
+    "date": "2025-08-12",
+    "category": "Conteúdo",
+    "categorySlug": "conteudo",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/guia-hiperlink/html-hiperlinks.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "O que é hiperlink: guia prático com exemplos em HTML"
+    },
+    "readingMinutes": 3,
+    "hasToc": true
+  },
+  {
+    "slug": "qrcode-avaliacoes",
+    "title": "Pedir avaliações no Google Meu Negócio com QR Code prático",
+    "h1": "Pedir avaliações no Google Meu Negócio com QR Code prático",
+    "summary": "Veja como pedir avaliações de forma ética, criar QR Codes personalizados com foto e acompanhar sua reputação online com eficiência e confiança.",
+    "date": "2025-08-12",
+    "category": "Perfil da Empresa no Google",
+    "categorySlug": "perfil-da-empresa-no-google",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/qrcode-avaliacoes/qr-code-avaliacoes.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Pedir avaliações no Google Meu Negócio com QR Code prático"
+    },
+    "readingMinutes": 4,
+    "hasToc": false
+  },
+  {
+    "slug": "importancia-presenca-digital",
+    "title": "Importância da presença digital para aparecer no Google",
+    "h1": "Importância da presença digital para aparecer no Google",
+    "summary": "Descubra por que investir na presença digital é essencial e como o Google Meu Negócio pode ser o primeiro passo para atrair clientes e crescer online.",
+    "date": "2025-08-12",
+    "category": "Perfil da Empresa no Google",
+    "categorySlug": "perfil-da-empresa-no-google",
+    "author": "Isabella Brilha",
+    "authorUrl": "https://linkedin.com/in/isabella-brilha",
+    "cover": {
+      "src": "/blog/importancia-presenca-digital/presenca-digital-empresas.webp",
+      "width": 800,
+      "height": 600,
+      "alt": "Importância da presença digital para aparecer no Google"
+    },
+    "readingMinutes": 4,
+    "hasToc": false
+  }
+]

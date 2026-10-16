@@ -26,6 +26,7 @@ export function Footer() {
           <h2 className="footer__title">Agência</h2>
           <ul>
             <li><Link href="/cases">Cases</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/sobre">Sobre nós</Link></li>
             <li><Link href="/contato">Contato</Link></li>
             <li><a href="https://www.pipalocal.com.br" target="_blank" rel="noopener">Pipa Local</a></li>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { cases, homeFaq, method, services, stages, team, testimonials } from "@/lib/content";
+import { getPosts } from "@/lib/blog";
+import { PostRow } from "@/components/PostList";
 import { site, whatsappLink } from "@/lib/site";
 
 function HeroWaves() {
@@ -164,7 +166,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--paper" aria-labelledby="perguntas">
+      <section className="section section--paper" aria-labelledby="do-blog">
+        <div className="wrap">
+          <div className="section-head section-head--split">
+            <h2 id="do-blog" className="h2">Do blog.</h2>
+            <p className="lead">Guias práticos de SEO e Perfil da Empresa no Google, do jeito que aplicamos com nossos clientes.</p>
+          </div>
+          <div className="post-list">
+            {getPosts().slice(0, 3).map((p) => (
+              <PostRow key={p.slug} post={p} />
+            ))}
+          </div>
+          <p style={{ marginTop: 40 }}>
+            <Link className="btn btn--ghost" href="/blog">Ver todos os artigos</Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="perguntas">
         <div className="wrap">
           <div className="section-head">
             <h2 id="perguntas" className="h2">Perguntas frequentes.</h2>

@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/lib/content";
+import { getCategories, getPosts } from "@/lib/blog";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const pages = ["", "/servicos", "/cases", "/sobre", "/contato"].map((p) => ({
+  const pages = ["", "/servicos", "/cases", "/blog", "/sobre", "/contato"].map((p) => ({
     url: `${site.url}${p}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
@@ -16,5 +17,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.9,
   }));
-  return [...pages, ...svc];
+  const blog = getPosts().map((p) => ({
+    url: `${site.url}/blog/${p.slug}`,
+    lastModified: new Date(`${p.updated || p.date}T12:00:00`),
+    changeFrequency: "yearly" as const,
+    priority: 0.7,
+  }));
+  const cats = getCategories().map((c) => ({
+    url: `${site.url}/blog/categoria/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+  return [...pages, ...svc, ...blog, ...cats];
 }

@@ -5,6 +5,7 @@ import { whatsappLink } from "@/lib/site";
 const nav = [
   { href: "/servicos", label: "Serviços" },
   { href: "/cases", label: "Cases" },
+  { href: "/blog", label: "Blog" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ];
