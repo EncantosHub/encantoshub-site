@@ -80,6 +80,7 @@ for (const post of legacy) {
   rootEl.querySelectorAll("a").forEach((a) => {
     let href = (a.getAttribute("href") || "").trim();
     href = href.replace(/^https?:\/\/(www\.)?encantoshub\.com\.br/, "") || "/";
+    href = href.replace("wa.me/5511964721143", "wa.me/5584986240202"); // WhatsApp atual
     const m = href.match(/^\/blog\/([^/?#]+)/);
     if (m) {
       const target = renamed[m[1]] || m[1];

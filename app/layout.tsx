@@ -42,7 +42,7 @@ const orgSchema = {
   image: `${site.url}/opengraph-image.png`,
   description: site.description,
   email: site.email,
-  telephone: "+55 11 96472-1143",
+  telephone: "+55 84 98624-0202",
   slogan: site.tagline,
   address: {
     "@type": "PostalAddress",
