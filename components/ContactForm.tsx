@@ -73,7 +73,6 @@ export function ContactForm({ defaultInterest = "" }: { defaultInterest?: string
             {services.map((s) => (
               <option key={s.slug} value={s.name}>{s.name}</option>
             ))}
-            <option value="Consultoria estratégica">Consultoria estratégica</option>
           </select>
         </label>
       </div>

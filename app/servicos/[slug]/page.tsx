@@ -46,6 +46,18 @@ export default async function ServicePage({ params }: Props) {
           <div className="prose-block">
             <h2>Para quem é</h2>
             <p>{s.forWho}</p>
+            {s.facts ? (
+              <dl className="facts">
+                {s.facts.map((f) => (
+                  <div key={f.label}>
+                    <dt>{f.label}</dt>
+                    <dd>
+                      <strong>{f.value}</strong> {f.note}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
           </div>
           <div className="prose-block">
             <h2>O que entregamos</h2>

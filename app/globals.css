@@ -147,7 +147,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Serviços */
 .services { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--line); }
-.service { display: grid; gap: 10px; padding: 30px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; position: relative; }
+.service { display: grid; gap: 10px; align-content: start; padding: 30px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; position: relative; }
 .service h3 { font-size: clamp(1.4rem, 2.4vw, 1.75rem); }
 .service p { max-width: 44ch; }
 .service__more { font-weight: var(--w-ui); color: var(--teal-ink); font-size: 0.95rem; }
@@ -367,3 +367,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .article__cta .btn:hover { background: #fff; }
 .article__cta .btn--ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1.5px var(--cream); }
 .article__cta .btn--ghost:hover { background: var(--cream); color: var(--teal-deep); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 12px 0 0; }
+.facts > div { background: var(--cream); border-radius: 18px; padding: 18px 20px; }
+.facts dt { font-size: 0.9rem; color: var(--gray); }
+.facts dd { margin: 4px 0 0; font-size: 0.95rem; }
+.facts dd strong { display: block; font-size: 1.6rem; font-weight: var(--w-title); color: var(--ink); letter-spacing: var(--track-title); }

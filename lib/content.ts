@@ -9,69 +9,44 @@ export type Service = {
   deliverables: string[];
   howItWorks: { step: string; text: string }[];
   faq: { q: string; a: string }[];
+  facts?: { label: string; value: string; note: string }[];
 };
 
 export const services: Service[] = [
   {
-    slug: "seo",
-    name: "SEO",
-    short: "Sua marca aparecendo quando o cliente pesquisa o que você vende.",
-    title: "Consultoria e gestão de SEO",
+    slug: "seo-e-geo",
+    name: "SEO e GEO",
+    short: "Sua marca aparecendo no Google e citada nas respostas do ChatGPT, Gemini e Perplexity.",
+    title: "SEO e GEO: Google e inteligências artificiais",
     metaDescription:
-      "Gestão de SEO técnica, on-page, de conteúdo e de links para empresas que querem crescer no Google com tráfego orgânico consistente.",
+      "Gestão de SEO e GEO: técnica, conteúdo e autoridade para sua marca crescer no Google e ser citada pelo ChatGPT, Gemini, Perplexity e AI Overviews.",
     intro:
-      "Cuidamos do SEO de ponta a ponta: a base técnica do site, as páginas que precisam ranquear, os conteúdos que respondem às buscas do seu público e a autoridade que o Google exige para colocar sua marca na frente da concorrência.",
+      "Hoje o cliente pesquisa no Google e também pergunta para uma IA. Cuidamos das duas frentes juntas: a base técnica do site, as páginas que precisam ranquear, conteúdos que respondem com clareza e a autoridade que faz o Google e as IAs reconhecerem e recomendarem a sua marca.",
     forWho:
-      "Empresas com site próprio, de pequenos negócios a grandes marcas, que querem depender menos de anúncio e construir um canal de aquisição que continua trazendo clientes mês após mês.",
+      "Empresas com site próprio, de pequenos negócios a grandes marcas, que querem depender menos de anúncio, crescer no orgânico e garantir que, quando alguém pede uma recomendação a uma IA no seu segmento ou na sua cidade, o seu nome apareça.",
     deliverables: [
       "Diagnóstico técnico completo: rastreamento, indexação, velocidade e Core Web Vitals",
       "Pesquisa de palavras-chave e mapa de intenção de busca",
+      "Mapeamento de como as IAs descrevem sua marca e seus concorrentes hoje",
       "Otimização on-page de páginas de serviço, categorias e produtos",
-      "Planejamento e revisão de conteúdo para blog",
-      "Link building e auditoria de backlinks tóxicos",
-      "Configuração de Google Search Console, GA4 e acompanhamento de posições",
+      "Conteúdos em formato de resposta: perguntas, comparações, dados e definições",
+      "Dados estruturados (Schema.org), arquivo llms.txt e consistência da marca em toda a web",
+      "Link building, presença em fontes confiáveis e auditoria de backlinks tóxicos",
+      "Configuração de Google Search Console e GA4, com acompanhamento de posições e citações em IAs",
       "Relatório mensal com o que foi feito, o que mudou e o próximo passo",
     ],
     howItWorks: [
-      { step: "Diagnóstico", text: "Auditamos o site e a concorrência para entender onde você está e o que está travando o crescimento." },
+      { step: "Diagnóstico", text: "Auditamos o site, a concorrência e o que as IAs dizem sobre a sua marca hoje." },
       { step: "Plano semestral", text: "Priorizamos as ações por impacto e esforço, com metas claras para cada trimestre." },
-      { step: "Execução contínua", text: "Técnica, conteúdo e links andando juntos, com reuniões de alinhamento." },
-      { step: "Medição", text: "Impressões, cliques, posições e conversões acompanhados todo mês." },
+      { step: "Execução contínua", text: "Técnica, conteúdo, dados estruturados e links andando juntos, com reuniões de alinhamento." },
+      { step: "Medição", text: "Impressões, cliques, posições, conversões e menções nas IAs acompanhados todo mês." },
     ],
     faq: [
-      { q: "Em quanto tempo o SEO traz resultado?", a: "Ajustes técnicos e de páginas existentes costumam aparecer em semanas. Crescimento consistente de tráfego orgânico normalmente se consolida entre 4 e 8 meses, dependendo da concorrência e do histórico do domínio." },
-      { q: "Vocês garantem primeira posição no Google?", a: "Não. Ninguém controla o algoritmo, e quem promete posição garantida está vendendo o que não pode entregar. Garantimos método, transparência e acompanhamento de evolução real." },
-      { q: "Preciso trocar de site para fazer SEO?", a: "Na maioria dos casos, não. Trabalhamos com WordPress, Wix, Shopify, Next.js e outras plataformas. Quando o site limita o crescimento, mostramos o porquê e as alternativas." },
-    ],
-  },
-  {
-    slug: "geo",
-    name: "GEO",
-    short: "Sua empresa citada nas respostas do ChatGPT, Gemini e Perplexity.",
-    title: "GEO: otimização para inteligências artificiais",
-    metaDescription:
-      "GEO (Generative Engine Optimization) para sua marca ser citada e recomendada em ChatGPT, Gemini, Perplexity, Copilot e nas AI Overviews do Google.",
-    intro:
-      "Cada vez mais gente pergunta para uma IA antes de pesquisar no Google. GEO é o trabalho de fazer sua marca ser entendida, citada e recomendada por essas ferramentas: conteúdo que responde com clareza, dados estruturados, presença em fontes confiáveis e uma entidade de marca consistente em toda a web.",
-    forWho:
-      "Empresas que já têm alguma presença digital e querem garantir que, quando alguém pede uma recomendação a uma IA no seu segmento ou na sua cidade, o seu nome apareça.",
-    deliverables: [
-      "Mapeamento de como as IAs descrevem sua marca e seus concorrentes hoje",
-      "Conteúdos em formato de resposta: perguntas, comparações, dados e definições",
-      "Dados estruturados (Schema.org) e arquivo llms.txt",
-      "Consistência de entidade: nome, endereço, serviços e perfis alinhados",
-      "Presença em diretórios, guias e publicações que as IAs usam como fonte",
-      "Monitoramento periódico de citações em ChatGPT, Gemini, Perplexity e AI Overviews",
-    ],
-    howItWorks: [
-      { step: "Leitura das IAs", text: "Fazemos as perguntas que seu cliente faria e registramos quem é citado e por quê." },
-      { step: "Base de entidade", text: "Ajustamos site, perfis e dados estruturados para a sua marca ser reconhecida sem ambiguidade." },
-      { step: "Conteúdo citável", text: "Produzimos páginas que respondem de forma direta, verificável e fácil de citar." },
-      { step: "Acompanhamento", text: "Repetimos as consultas e medimos a evolução das menções." },
-    ],
-    faq: [
-      { q: "GEO substitui o SEO?", a: "Não, complementa. As IAs se apoiam muito no que já ranqueia bem e em fontes confiáveis. Um bom SEO é a base de um bom GEO." },
+      { q: "Qual a diferença entre SEO e GEO?", a: "SEO trabalha para o seu site aparecer nos resultados do Google. GEO (Generative Engine Optimization) trabalha para a sua marca ser citada e recomendada nas respostas de IAs como ChatGPT, Gemini, Perplexity e as AI Overviews do Google. Os dois se complementam: as IAs se apoiam muito no que já ranqueia bem e em fontes confiáveis." },
+      { q: "Em quanto tempo traz resultado?", a: "Ajustes técnicos e de páginas existentes costumam aparecer em semanas. Crescimento consistente de tráfego orgânico normalmente se consolida entre 4 e 8 meses, dependendo da concorrência e do histórico do domínio." },
+      { q: "Vocês garantem primeira posição no Google ou nas IAs?", a: "Não. Ninguém controla os algoritmos, e quem promete posição garantida está vendendo o que não pode entregar. Garantimos método, transparência e acompanhamento de evolução real." },
       { q: "Dá para medir resultado de GEO?", a: "Sim, com monitoramento de menções nas principais IAs, tráfego de referência vindo delas e presença nas AI Overviews do Google." },
+      { q: "Preciso trocar de site?", a: "Na maioria dos casos, não. Trabalhamos com WordPress, Wix, Shopify, Next.js e outras plataformas. Quando o site limita o crescimento, mostramos o porquê e as alternativas." },
     ],
   },
   {
@@ -189,6 +164,41 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Preciso contratar tráfego pago junto com SEO?", a: "Não. Só recomendamos quando faz sentido para o momento do negócio." },
+    ],
+  },
+  {
+    slug: "consultoria",
+    name: "Consultoria estratégica",
+    short: "Sessões avulsas de SEO e marketing digital para empreendedores. Ideal para quem busca orientação prática e personalizada antes de contratar um plano de gestão contínua.",
+    title: "Consultoria estratégica de SEO e marketing digital",
+    metaDescription:
+      "Sessão avulsa e online de 1h30 com especialista em SEO: diagnóstico pontual do site, respostas às suas dúvidas e plano de ação imediato.",
+    intro:
+      "Sessões avulsas de SEO e marketing digital para empreendedores. Ideal para quem busca orientação prática e personalizada antes de contratar um plano de gestão contínua: direcionamento rápido, feito para o seu negócio.",
+    forWho:
+      "Empreendedores e gestores que precisam de orientação rápida e estratégica para resolver dúvidas pontuais sobre SEO e presença digital. Se depois da sessão você quiser um acompanhamento de longo prazo, apresentamos o plano de gestão que faz sentido para o seu momento.",
+    deliverables: [
+      "Sessão de 1h30 online, pelo Google Meet",
+      "Diagnóstico pontual do seu site",
+      "Resolução de dúvidas técnicas",
+      "Plano de ação imediato",
+      "Gravação da sessão",
+      "Material de apoio por e-mail",
+    ],
+    facts: [
+      { label: "Investimento", value: "R$ 300", note: "por sessão" },
+      { label: "Duração", value: "1h30", note: "sessão online" },
+      { label: "Modalidade", value: "Avulsa", note: "sem compromisso" },
+    ],
+    howItWorks: [
+      { step: "Agendamento", text: "Você conta um pouco do negócio e das dúvidas, e marcamos o melhor horário." },
+      { step: "Auditoria inicial", text: "Antes da conversa, analisamos o site e a presença digital da sua marca." },
+      { step: "Sessão de 1h30", text: "Respondemos às dúvidas e mostramos as prioridades, com exemplos no seu próprio site." },
+      { step: "Próximos passos", text: "Você recebe a gravação, o material de apoio e um plano de ação para colocar em prática." },
+    ],
+    faq: [
+      { q: "Preciso contratar um plano depois da sessão?", a: "Não. A consultoria é avulsa e sem compromisso. Se depois da primeira sessão você quiser, pode contratar um plano estratégico anual, mas isso só é definido depois da conversa inicial." },
+      { q: "A sessão é presencial?", a: "É online, pelo Google Meet, e você recebe a gravação para rever quando quiser." },
     ],
   },
 ];

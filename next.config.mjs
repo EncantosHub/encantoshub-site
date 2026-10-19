@@ -4,9 +4,10 @@ const nextConfig = {
   // URLs do site antigo (Lovable) que mudaram de endereço
   async redirects() {
     return [
-      { source: "/servicos/gestao-completa", destination: "/servicos/seo", permanent: true },
-      { source: "/servicos/gestao-essencial", destination: "/servicos/seo", permanent: true },
-      { source: "/servicos/consultoria", destination: "/servicos", permanent: true },
+      { source: "/servicos/gestao-completa", destination: "/servicos/seo-e-geo", permanent: true },
+      { source: "/servicos/gestao-essencial", destination: "/servicos/seo-e-geo", permanent: true },
+      { source: "/servicos/seo", destination: "/servicos/seo-e-geo", permanent: true },
+      { source: "/servicos/geo", destination: "/servicos/seo-e-geo", permanent: true },
       { source: "/descubra-seu-plano", destination: "/servicos", permanent: true },
       { source: "/ferramentas/:path*", destination: "/blog", permanent: false },
       { source: "/blog/o-que-e-hiperlink", destination: "/blog/guia-hiperlink", permanent: true },
