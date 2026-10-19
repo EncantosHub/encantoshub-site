@@ -303,7 +303,7 @@ export const team = [
   {
     name: "Paloma Nogueira",
     role: "Cofundadora, estrategista digital",
-    bio: "Técnica de Qualidade Digital e consultora de visibilidade online. Cuida para que cada negócio esteja presente, correto e bem avaliado nos canais certos. Vive em Pipa desde 2024 e conhece cada cantinho da região.",
+    bio: "Técnica de Qualidade Digital e consultora de visibilidade online com mais de 10 anos de experiência. Cuida para que cada negócio esteja presente, correto e bem avaliado nos canais certos, além de ter um olhar especialista para design e experiência do usuário.",
   },
 ];
 

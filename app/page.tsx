@@ -147,10 +147,10 @@ export default function Home() {
       <section className="section" aria-labelledby="quem">
         <div className="wrap">
           <div className="section-head section-head--split">
-            <h2 id="quem" className="h2">Feita em Pipa, para marcas de todo o Brasil.</h2>
+            <h2 id="quem" className="h2">Sua estratégia feita por quem entende sobre as buscas.</h2>
             <p className="lead">
-              Acreditamos que o digital deve ser como a vida: com fluidez e qualidade. Nada de voos passageiros: buscamos
-              resultados consistentes, que respeitam o ritmo de cada negócio.
+              Somos um grupo de especialistas em marketing digital e tráfego orgânico. Nossa missão é potencializar a
+              presença online com soluções personalizadas, técnicas e sustentáveis.
             </p>
           </div>
           <div className="team">
