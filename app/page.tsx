@@ -27,9 +27,9 @@ export default function Home() {
           <h1 className="hero__title">Sua marca encontrada no Google, no mapa e nas IAs.</h1>
           <HeroWaves />
           <p className="hero__lead">
-            A Encantos Hub é uma agência de marketing especializada em SEO e GEO. Criamos sites, produzimos conteúdo,
-            cuidamos da sua presença local e, quando a estratégia pede, ativamos parceiros de tráfego pago. Tudo para o
-            cliente certo encontrar você.
+            Criamos estratégias de presença digital baseadas em dados para negócios locais, nacionais e internacionais.
+            Analisamos como seus clientes pesquisam, onde sua marca aparece e quais oportunidades existem para
+            transformar buscas em clientes.
           </p>
           <div className="hero__actions">
             <Link className="btn" href="/contato">Pedir um diagnóstico</Link>
