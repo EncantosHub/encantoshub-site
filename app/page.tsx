@@ -170,7 +170,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head section-head--split">
             <h2 id="do-blog" className="h2">Do blog.</h2>
-            <p className="lead">Guias práticos de SEO e Perfil da Empresa no Google, do jeito que aplicamos com nossos clientes.</p>
+            <p className="lead">Guias práticos de SEO e perfil da empresa no Google, do jeito que aplicamos com nossos clientes.</p>
           </div>
           <div className="post-list">
             {getPosts().slice(0, 3).map((p) => (

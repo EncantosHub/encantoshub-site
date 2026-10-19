@@ -196,7 +196,7 @@ export const services: Service[] = [
 export const stages = [
   {
     name: "Precisa ser encontrado",
-    text: "Construímos as bases: site, Perfil da Empresa no Google, dados corretos e as primeiras páginas que respondem ao que o cliente procura.",
+    text: "Construímos as bases: site, perfil da empresa no Google, dados corretos e as primeiras páginas que respondem ao que o cliente procura.",
   },
   {
     name: "Precisa ganhar espaço",
