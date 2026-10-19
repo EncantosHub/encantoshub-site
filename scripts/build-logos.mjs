@@ -93,7 +93,7 @@ const og = (() => {
   void encantos;
   const title = "SEO, GEO e presença local";
   const sub = "Estratégia digital para sua marca ser encontrada no Google, no mapa e nas IAs.";
-  const t1 = textPath(f600, title, 90, 420, 64);
+  const t1 = textPath(f500, title, 90, 420, 64);
   const t2 = textPath(f500, sub, 90, 490, 30);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630"><rect width="1200" height="630" fill="${COLORS.cream}"/><g transform="translate(90 70) scale(0.78)">${horizontal({ stroke: COLORS.teal, dot: COLORS.terra, word: COLORS.ink, hub: COLORS.teal }).replace(/^<svg[^>]*>|<\/svg>$/g, "")}</g><path d="${t1}" fill="${COLORS.ink}"/><path d="${t2}" fill="#4a4a4a"/><rect x="90" y="560" width="1020" height="6" rx="3" fill="${COLORS.teal}"/><circle cx="1110" cy="563" r="12" fill="${COLORS.terra}"/></svg>`;
 })();
