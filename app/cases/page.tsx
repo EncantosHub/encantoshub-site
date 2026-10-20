@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Crumbs } from "@/components/Crumbs";
 import { cases, otherProjects, testimonials } from "@/lib/content";
+import { whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Cases de SEO e presença digital",
@@ -71,7 +71,7 @@ export default function Cases() {
             ))}
           </div>
           <p style={{ marginTop: 56 }}>
-            <Link className="btn" href="/contato">Quero resultados assim</Link>
+            <a className="btn" href={whatsappLink("Olá! Vi os cases no site da Encantos Hub e quero resultados assim para a minha empresa.")} target="_blank" rel="noopener" data-cta="cases">Quero resultados assim</a>
           </p>
         </div>
       </section>

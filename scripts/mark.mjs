@@ -17,10 +17,10 @@ export const MARK_STROKES = [
 export const MARK_DOT = { cx: 220, cy: 56, r: 14 };
 
 export const COLORS = {
-  teal: "#2F8F83",
-  cream: "#EFE6D7",
+  ocean: "#0B6FA4",
+  light: "#F3F7FA",
   terra: "#C86A4B",
-  ink: "#222222",
+  ink: "#142330",
   gray: "#777777",
   white: "#FFFFFF",
 };

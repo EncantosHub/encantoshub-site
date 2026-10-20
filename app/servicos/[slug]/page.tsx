@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ContactForm } from "@/components/ContactForm";
+import { FaqList, WhatsAppCta } from "@/components/WhatsAppCta";
 import { Crumbs } from "@/components/Crumbs";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { services } from "@/lib/content";
-import { site } from "@/lib/site";
+import { site, whatsappLink } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -29,7 +29,6 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
   if (!s) notFound();
-  const others = services.filter((x) => x.slug !== s.slug);
 
   return (
     <>
@@ -38,6 +37,11 @@ export default async function ServicePage({ params }: Props) {
           <Crumbs items={[{ href: "/servicos", label: "Serviços" }, { href: `/servicos/${s.slug}`, label: s.name }]} />
           <h1>{s.title}</h1>
           <p className="lead">{s.intro}</p>
+          <p className="hero__actions">
+            <a className="btn" href={whatsappLink(`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`)} target="_blank" rel="noopener" data-cta="servico-topo">
+              Falar no WhatsApp
+            </a>
+          </p>
         </div>
       </section>
 
@@ -92,29 +96,14 @@ export default async function ServicePage({ params }: Props) {
           <div className="section-head">
             <h2 id="duvidas" className="h2">Dúvidas comuns.</h2>
           </div>
-          <div className="faq">
-            {s.faq.map((f) => (
-              <details key={f.q}>
-                <summary>{f.q}</summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
-          </div>
+          <FaqList items={s.faq} />
         </div>
       </section>
 
-      <section className="section cta" aria-labelledby="fale">
-        <div className="wrap contact">
-          <div className="contact__aside">
-            <h2 id="fale" className="h2">Quer saber se faz sentido para o seu negócio?</h2>
-            <p className="lead">Mande uma mensagem e respondemos com um primeiro olhar sobre a sua presença digital.</p>
-            <p>Veja também: {others.map((o, i) => (
-              <span key={o.slug}>{i > 0 ? ", " : ""}<Link href={`/servicos/${o.slug}`}>{o.name}</Link></span>
-            ))}.</p>
-          </div>
-          <ContactForm defaultInterest={s.name} />
-        </div>
-      </section>
+      <WhatsAppCta
+        title="Quer saber se faz sentido para o seu negócio?"
+        message={`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`}
+      />
 
       <JsonLd
         data={[

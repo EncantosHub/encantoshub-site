@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Crumbs } from "@/components/Crumbs";
-import { plans, services, method } from "@/lib/content";
+import { WhatsAppCta } from "@/components/WhatsAppCta";
+import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Serviços de SEO, GEO, sites e presença local",
+  title: "Serviços: consultoria SEO, perfil da empresa no Google e sites",
   description:
-    "Conheça os serviços da Encantos Hub: SEO, GEO, gestão de presença local, criação de sites, produção de conteúdo e tráfego pago com parceiros.",
+    "Serviços da Encantos Hub, agência de marketing: consultoria SEO e GEO, perfil da empresa no Google, criação de sites, conteúdo, tráfego pago com parceiros e consultoria estratégica.",
   alternates: { canonical: "/servicos" },
 };
 
@@ -16,11 +17,8 @@ export default function Servicos() {
       <section className="page-hero">
         <div className="wrap">
           <Crumbs items={[{ href: "/servicos", label: "Serviços" }]} />
-          <h1>Faça seu negócio ser encontrado, ganhar espaço e virar autoridade.</h1>
-          <p className="lead">
-            Estratégias de presença digital baseadas em dados para negócios locais, nacionais e internacionais. Analisamos
-            como seus clientes pesquisam, onde sua marca aparece e quais oportunidades existem para transformar buscas em clientes.
-          </p>
+          <h1>Serviços para sua empresa aparecer nas pesquisas do Google.</h1>
+          <p className="lead">Escolha por onde começar. Se não souber, chame no WhatsApp que a gente indica.</p>
         </div>
       </section>
 
@@ -31,55 +29,15 @@ export default function Servicos() {
             {services.map((s) => (
               <Link className="service" key={s.slug} href={`/servicos/${s.slug}`}>
                 <h3>{s.name}</h3>
-                <p>{s.intro}</p>
-                <span className="service__more">Como funciona</span>
+                <p>{s.short}</p>
+                <span className="service__more">Saiba mais</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="formatos">
-        <div className="wrap">
-          <div className="section-head section-head--split">
-            <h2 id="formatos" className="h2">Formatos de contratação.</h2>
-            <p className="lead">Os valores são definidos depois do diagnóstico, de acordo com o tamanho do site e a concorrência do seu mercado.</p>
-          </div>
-          <div className="plans">
-            {plans.map((p) => (
-              <article className="plan" key={p.name}>
-                <h3>{p.name}</h3>
-                <p>{p.text}</p>
-                <ul>
-                  {p.items.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--paper" aria-labelledby="metodo">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="metodo" className="h2">Estar presente, ser relevante, medir, melhorar.</h2>
-          </div>
-          <ol className="steps">
-            {method.map((m, i) => (
-              <li className="step" key={m.name}>
-                <span className="step__n" aria-hidden="true">{i + 1}</span>
-                <h3>{m.name}</h3>
-                <p>{m.text}</p>
-              </li>
-            ))}
-          </ol>
-          <p style={{ marginTop: 56 }}>
-            <Link className="btn" href="/contato">Pedir um diagnóstico</Link>
-          </p>
-        </div>
-      </section>
+      <WhatsAppCta title="Não sabe por onde começar?" text="Conte um pouco do seu negócio no WhatsApp. Avaliamos como sua empresa aparece hoje no Google e indicamos o serviço certo para o seu momento." />
     </>
   );
 }

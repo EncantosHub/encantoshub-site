@@ -1,10 +1,16 @@
 import Link from "next/link";
-import { ContactForm } from "@/components/ContactForm";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
-import { cases, homeFaq, method, services, stages, team, testimonials } from "@/lib/content";
-import { getPosts } from "@/lib/blog";
-import { PostRow } from "@/components/PostList";
-import { site, whatsappLink } from "@/lib/site";
+import { FaqList, WhatsAppCta } from "@/components/WhatsAppCta";
+import { cases, homeFaq, services, team } from "@/lib/content";
+import { whatsappLink } from "@/lib/site";
+
+const featured = ["consultoria-seo", "gestao-local", "criacao-de-sites", "consultoria"];
+
+const steps = [
+  { name: "Avaliação gratuita", text: "Vemos como sua empresa aparece hoje no Google, no mapa e nas IAs, e o que os concorrentes estão fazendo." },
+  { name: "Plano claro", text: "Você recebe as prioridades em linguagem simples: o que fazer primeiro e o que pode esperar." },
+  { name: "Execução e acompanhamento", text: "Colocamos o plano em prática e mostramos a evolução todo mês, com atualizações pelo WhatsApp." },
+];
 
 function HeroWaves() {
   const base = (y: number) =>
@@ -20,11 +26,14 @@ function HeroWaves() {
 }
 
 export default function Home() {
+  const main = featured.map((slug) => services.find((s) => s.slug === slug)!).filter(Boolean);
+  const topCases = cases.slice(0, 3);
+
   return (
     <>
       <section className="hero">
         <div className="wrap hero__inner">
-          <h1 className="hero__title">Sua marca encontrada no Google, no mapa e nas IAs.</h1>
+          <h1 className="hero__title">Agência de marketing para sua empresa aparecer nas pesquisas do Google.</h1>
           <HeroWaves />
           <p className="hero__lead">
             Criamos estratégias de presença digital baseadas em dados para negócios locais, nacionais e internacionais.
@@ -32,115 +41,68 @@ export default function Home() {
             transformar buscas em clientes.
           </p>
           <div className="hero__actions">
-            <Link className="btn" href="/contato">Pedir um diagnóstico</Link>
-            <a className="btn btn--ghost" href={whatsappLink()} target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a className="btn btn--big" href={whatsappLink()} target="_blank" rel="noopener" data-cta="hero">
+              Pedir avaliação gratuita
+            </a>
+            <Link className="btn btn--ghost btn--big" href="/servicos">Ver serviços</Link>
           </div>
-          <p className="hero__proof">
-            <span>Experiência em projetos para</span>
-            <strong>NET</strong>
-            <strong>Banco PAN</strong>
-            <strong>Casas Bahia</strong>
-            <strong>Loggi</strong>
-            <strong>Insper</strong>
+          <p className="hero__note">Avaliação gratuita do posicionamento da sua empresa no Google, pelo WhatsApp e sem compromisso.</p>
+        </div>
+      </section>
+
+      <section className="section section--paper" aria-labelledby="servicos">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 id="servicos" className="h2">Como podemos ajudar.</h2>
+          </div>
+          <div className="svc-grid">
+            {main.map((s) => (
+              <Link className="svc-card" key={s.slug} href={`/servicos/${s.slug}`}>
+                <h3>{s.name}</h3>
+                <p>{s.short}</p>
+                <span className="svc-card__more">Saiba mais</span>
+              </Link>
+            ))}
+          </div>
+          <p className="svc-also">
+            Também produzimos <Link href="/servicos/producao-de-conteudo">conteúdo para blogs e sites</Link> e, quando a
+            estratégia pede, ativamos <Link href="/servicos/trafego-pago">parceiros de tráfego pago</Link>.
           </p>
         </div>
       </section>
 
-      <section className="section section--paper" aria-labelledby="momento">
+      <section className="section" aria-labelledby="como">
         <div className="wrap">
-          <div className="section-head section-head--split">
-            <h2 id="momento" className="h2">O plano depende do momento do seu negócio.</h2>
-            <p className="lead">
-              Não existe pacote igual para todo mundo. Primeiro entendemos onde sua marca está hoje, depois escolhemos os
-              canais que levam ao próximo passo.
-            </p>
+          <div className="section-head">
+            <h2 id="como" className="h2">Como funciona a nossa consultoria SEO.</h2>
           </div>
-          <ol className="stages">
-            {stages.map((s) => (
-              <li className="stage" key={s.name}>
-                <h3>{s.name}</h3>
-                <p>{s.text}</p>
+          <ol className="steps3">
+            {steps.map((st, i) => (
+              <li key={st.name}>
+                <span className="step__n" aria-hidden="true">{i + 1}</span>
+                <h3>{st.name}</h3>
+                <p>{st.text}</p>
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="servicos">
-        <div className="wrap">
-          <div className="section-head section-head--split">
-            <h2 id="servicos" className="h2">O que fazemos pela sua visibilidade.</h2>
-            <p className="lead">SEO e GEO são o centro. Ao redor deles, tudo o que faz uma marca ser encontrada e escolhida.</p>
-          </div>
-          <div className="services">
-            {services.map((s) => (
-              <Link className="service" key={s.slug} href={`/servicos/${s.slug}`}>
-                <h3>{s.name}</h3>
-                <p>{s.short}</p>
-                <span className="service__more">Como funciona</span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
       <section className="section cases-section" aria-labelledby="cases">
         <div className="wrap">
-          <div className="section-head section-head--split">
-            <h2 id="cases" className="h2">Resultados que contam nossa história.</h2>
-            <p className="lead">De imobiliárias em Pipa a grandes marcas nacionais, o método é o mesmo: dados, prioridade e consistência.</p>
+          <div className="section-head">
+            <h2 id="cases" className="h2">Resultados de quem já aparece no Google.</h2>
           </div>
-          <ul className="cases">
-            {cases.slice(0, 4).map((c) => (
-              <li className="case" key={c.client + c.metric}>
-                <p className="case__metric">
-                  {c.metric}
-                  <span className="case__label">{c.label}</span>
-                </p>
-                <div>
-                  <h3 className="case__client">{c.client}</h3>
-                  <p className="case__text">{c.text}</p>
-                </div>
+          <ul className="cases-grid">
+            {topCases.map((c) => (
+              <li key={c.client + c.metric}>
+                <p className="case__metric">{c.metric}</p>
+                <p className="case__label">{c.label}</p>
+                <h3 className="case__client">{c.client}</h3>
               </li>
             ))}
           </ul>
           <Link className="btn btn--light" href="/cases">Ver todos os cases</Link>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="metodo">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="metodo" className="h2">Estratégia antes de execução.</h2>
-          </div>
-          <ol className="steps">
-            {method.map((m, i) => (
-              <li className="step" key={m.name}>
-                <span className="step__n" aria-hidden="true">{i + 1}</span>
-                <h3>{m.name}</h3>
-                <p>{m.text}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="section section--paper" aria-labelledby="depoimentos">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="depoimentos" className="h2">Quem trabalhou com a gente.</h2>
-          </div>
-          <div className="quotes">
-            {testimonials.map((t) => (
-              <figure className="quote" key={t.name}>
-                <blockquote>{t.quote}</blockquote>
-                <figcaption>
-                  <strong>{t.name}</strong>
-                  {t.role}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -166,52 +128,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--paper" aria-labelledby="do-blog">
-        <div className="wrap">
-          <div className="section-head section-head--split">
-            <h2 id="do-blog" className="h2">Do blog.</h2>
-            <p className="lead">Guias práticos de SEO e perfil da empresa no Google, do jeito que aplicamos com nossos clientes.</p>
-          </div>
-          <div className="post-list">
-            {getPosts().slice(0, 3).map((p) => (
-              <PostRow key={p.slug} post={p} />
-            ))}
-          </div>
-          <p style={{ marginTop: 40 }}>
-            <Link className="btn btn--ghost" href="/blog">Ver todos os artigos</Link>
-          </p>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="perguntas">
+      <section className="section section--paper" aria-labelledby="perguntas">
         <div className="wrap">
           <div className="section-head">
             <h2 id="perguntas" className="h2">Perguntas frequentes.</h2>
           </div>
-          <div className="faq">
-            {homeFaq.map((f) => (
-              <details key={f.q}>
-                <summary>{f.q}</summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
-          </div>
+          <FaqList items={homeFaq} />
         </div>
       </section>
 
-      <section className="section cta" id="contato" aria-labelledby="fale">
-        <div className="wrap contact">
-          <div className="contact__aside">
-            <h2 id="fale" className="h2">Vamos fazer seu negócio ser encontrado?</h2>
-            <p className="lead">Conte onde sua marca está hoje. Respondemos com um primeiro olhar sobre a sua presença digital e os próximos passos.</p>
-            <div className="contact__channels">
-              <a href={whatsappLink()} target="_blank" rel="noopener">WhatsApp {site.whatsappDisplay}</a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-            </div>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
+      <WhatsAppCta />
 
       <JsonLd data={faqSchema(homeFaq)} />
     </>

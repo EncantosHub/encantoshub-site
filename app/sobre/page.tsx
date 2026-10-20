@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Crumbs } from "@/components/Crumbs";
 import { Mark } from "@/components/Logo";
 import { team } from "@/lib/content";
+import { whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sobre a agência",
@@ -82,7 +82,7 @@ export default function Sobre() {
             ))}
           </div>
           <p style={{ marginTop: 56 }}>
-            <Link className="btn" href="/contato">Conversar com a gente</Link>
+            <a className="btn" href={whatsappLink()} target="_blank" rel="noopener" data-cta="sobre">Falar no WhatsApp</a>
           </p>
         </div>
       </section>

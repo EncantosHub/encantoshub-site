@@ -2,7 +2,7 @@ import { MARK_DOT, MARK_STROKES, MARK_VIEWBOX } from "@/lib/mark";
 
 export function Mark({
   className,
-  stroke = "var(--teal)",
+  stroke = "var(--ocean)",
   dot = "var(--terra)",
   strokeWidth = 8,
   title,
@@ -28,7 +28,7 @@ export function Logo({ tone = "default" }: { tone?: "default" | "light" }) {
   const light = tone === "light";
   return (
     <span className={`logo ${light ? "logo--light" : ""}`}>
-      <Mark className="logo__mark" stroke={light ? "var(--cream)" : "var(--teal)"} />
+      <Mark className="logo__mark" stroke={light ? "var(--foam)" : "var(--ocean)"} />
       <span className="logo__type">
         <span className="logo__word">encantos</span>
         <span className="logo__hub">HUB</span>

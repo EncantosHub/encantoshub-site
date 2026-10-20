@@ -136,7 +136,7 @@ for (const post of legacy) {
     category: categoryName(post.category),
     categorySlug: categorySlug(post.category),
     author: post.author,
-    authorUrl: post.authorLinkedIn || null,
+    authorUrl: null, // sem LinkedIn: contato centralizado no WhatsApp
     cover,
     readingMinutes: Math.max(2, Math.round(words / 200)),
     hasToc: /<h2[^>]*>\s*Sumário/i.test(html),

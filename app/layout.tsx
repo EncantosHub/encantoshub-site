@@ -4,13 +4,14 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { ClickTracker } from "@/components/ClickTracker";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Encantos Hub | Agência de SEO, GEO e presença local",
+    default: "Agência de marketing e consultoria SEO | Encantos Hub",
     template: "%s | Encantos Hub",
   },
   description: site.description,
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: site.name,
     url: site.url,
-    title: "Encantos Hub | Agência de SEO, GEO e presença local",
+    title: "Agência de marketing e consultoria SEO | Encantos Hub",
     description: site.description,
   },
   twitter: { card: "summary_large_image" },
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#EFE6D7",
+  themeColor: "#FFFFFF",
 };
 
 const orgSchema = {
@@ -41,7 +42,6 @@ const orgSchema = {
   logo: `${site.url}/brand/encantoshub-logo.png`,
   image: `${site.url}/opengraph-image.png`,
   description: site.description,
-  email: site.email,
   telephone: "+55 84 98624-0202",
   slogan: site.tagline,
   address: {
@@ -55,11 +55,11 @@ const orgSchema = {
     { "@type": "Person", name: "Isabella Brilha", jobTitle: "Especialista em SEO" },
     { "@type": "Person", name: "Paloma Nogueira", jobTitle: "Estrategista digital" },
   ],
-  knowsAbout: ["SEO", "GEO", "SEO local", "Perfil da Empresa no Google", "Criação de sites", "Marketing de conteúdo", "Tráfego pago"],
-  sameAs: [site.linkedin, "https://www.pipalocal.com.br"],
+  knowsAbout: ["Consultoria SEO", "GEO", "SEO local", "Perfil da empresa no Google", "Consultoria estratégica", "Criação de sites", "Marketing de conteúdo", "Tráfego pago"],
+  sameAs: ["https://www.pipalocal.com.br"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Serviços de marketing digital",
+    name: "Serviços de marketing digital e consultoria SEO",
     itemListElement: services.map((s) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: s.title, url: `${site.url}/servicos/${s.slug}` },
@@ -76,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="conteudo">{children}</main>
         <Footer />
         <JsonLd data={orgSchema} />
+        <ClickTracker />
       </body>
     </html>
   );

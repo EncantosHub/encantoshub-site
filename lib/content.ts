@@ -14,14 +14,14 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "seo-e-geo",
-    name: "SEO e GEO",
-    short: "Sua marca aparecendo no Google e citada nas respostas do ChatGPT, Gemini e Perplexity.",
-    title: "SEO e GEO: Google e inteligências artificiais",
+    slug: "consultoria-seo",
+    name: "Consultoria SEO",
+    short: "Para o seu site aparecer nas pesquisas do Google e ser citado pelo ChatGPT, Gemini e outras IAs.",
+    title: "Consultoria SEO para aparecer no Google e nas IAs",
     metaDescription:
-      "Gestão de SEO e GEO: técnica, conteúdo e autoridade para sua marca crescer no Google e ser citada pelo ChatGPT, Gemini, Perplexity e AI Overviews.",
+      "Consultoria SEO e GEO: técnica, conteúdo e autoridade para sua empresa aparecer nas pesquisas do Google e ser citada pelo ChatGPT, Gemini e Perplexity.",
     intro:
-      "Hoje o cliente pesquisa no Google e também pergunta para uma IA. Cuidamos das duas frentes juntas: a base técnica do site, as páginas que precisam ranquear, conteúdos que respondem com clareza e a autoridade que faz o Google e as IAs reconhecerem e recomendarem a sua marca.",
+      "Hoje o cliente pesquisa no Google e também pergunta para uma IA. Na nossa consultoria SEO cuidamos das duas frentes juntas (SEO e GEO): a base técnica do site, as páginas que precisam ranquear, conteúdos que respondem com clareza e a autoridade que faz o Google e as IAs reconhecerem e recomendarem a sua marca.",
     forWho:
       "Empresas com site próprio, de pequenos negócios a grandes marcas, que querem depender menos de anúncio, crescer no orgânico e garantir que, quando alguém pede uma recomendação a uma IA no seu segmento ou na sua cidade, o seu nome apareça.",
     deliverables: [
@@ -51,13 +51,13 @@ export const services: Service[] = [
   },
   {
     slug: "gestao-local",
-    name: "Presença e gestão local",
-    short: "Ser encontrado no mapa por quem está perto e pronto para comprar.",
-    title: "SEO local e gestão do Perfil da Empresa no Google",
+    name: "Perfil da empresa no Google",
+    short: "Sua empresa no topo do mapa quando alguém procura o que você vende perto de você.",
+    title: "Consultoria de posicionamento no Google para negócios locais",
     metaDescription:
       "Gestão de presença local: Perfil da Empresa no Google (Google Meu Negócio), avaliações, Google Maps, TripAdvisor, Waze, Bing e Apple Maps para negócios regionais.",
     intro:
-      "Para restaurantes, pousadas, clínicas, imobiliárias e comércios, o cliente decide no mapa. Cuidamos do Perfil da Empresa no Google, das avaliações e de todos os canais onde as pessoas procuram negócios perto delas.",
+      "Para restaurantes, pousadas, clínicas, imobiliárias e comércios, o cliente decide no mapa. Nossa consultoria de posicionamento no Google cuida do perfil da empresa no Google, das avaliações e de todos os canais onde as pessoas procuram negócios perto delas.",
     forWho:
       "Negócios com endereço físico ou área de atendimento definida, de Pipa a qualquer cidade do Brasil, que querem mais ligações, rotas e visitas.",
     deliverables: [
@@ -169,8 +169,8 @@ export const services: Service[] = [
   {
     slug: "consultoria",
     name: "Consultoria estratégica",
-    short: "Sessões avulsas de SEO e marketing digital para empreendedores. Ideal para quem busca orientação prática e personalizada antes de contratar um plano de gestão contínua.",
-    title: "Consultoria estratégica de SEO e marketing digital",
+    short: "Uma sessão avulsa de 1h30 para tirar dúvidas e sair com um plano de ação para o seu negócio.",
+    title: "Consultoria estratégica de marketing digital e SEO",
     metaDescription:
       "Sessão avulsa e online de 1h30 com especialista em SEO: diagnóstico pontual do site, respostas às suas dúvidas e plano de ação imediato.",
     intro:
@@ -331,8 +331,24 @@ export const plans = [
 ];
 
 export const homeFaq = [
-  { q: "O que é SEO?", a: "SEO (Search Engine Optimization) é o conjunto de ajustes técnicos, de conteúdo e de autoridade que faz um site aparecer nos resultados orgânicos do Google quando alguém pesquisa algo relacionado ao seu negócio." },
-  { q: "O que é GEO?", a: "GEO (Generative Engine Optimization) é a otimização para inteligências artificiais como ChatGPT, Gemini, Perplexity e as AI Overviews do Google, para que sua marca seja citada e recomendada nas respostas." },
-  { q: "A Encantos Hub atende só Praia da Pipa?", a: "Não. A agência tem base em Praia da Pipa (RN) e atende empresas de todo o Brasil de forma remota, de negócios locais a grandes marcas." },
-  { q: "Como começa o trabalho?", a: "Com uma conversa e um diagnóstico da sua presença digital. A partir dele, indicamos o formato de gestão que faz sentido para o momento do seu negócio." },
+  {
+    q: "Como aparecer nas pesquisas do Google?",
+    a: "Comece pelo gratuito: crie e mantenha atualizado o perfil da empresa no Google (antigo Google Meu Negócio), com fotos, horário e avaliações. Depois, tenha um site com páginas que respondem ao que o seu cliente pesquisa. É isso que uma consultoria SEO organiza: o que fazer primeiro, em que ordem e como medir.",
+  },
+  {
+    q: "Dá para aparecer no Google de graça?",
+    a: "Sim. O perfil da empresa no Google e o tráfego orgânico do site não custam nada por clique, ao contrário dos anúncios. O investimento está no trabalho de otimização, e o resultado continua mesmo quando você para de pagar mídia.",
+  },
+  {
+    q: "O que faz uma consultoria SEO?",
+    a: "Analisa como o seu cliente pesquisa, onde a sua marca aparece hoje e o que está impedindo o crescimento. A partir disso, corrige a parte técnica do site, ajusta páginas e conteúdos e acompanha os resultados todo mês. Também trabalhamos o GEO, para sua empresa ser citada pelo ChatGPT, Gemini e outras IAs.",
+  },
+  {
+    q: "Qual a diferença entre consultoria estratégica e gestão contínua?",
+    a: "A consultoria estratégica é uma sessão avulsa de 1h30 para tirar dúvidas e sair com um plano de ação. A gestão contínua é o acompanhamento mês a mês, em que a agência executa o plano com você.",
+  },
+  {
+    q: "Vocês atendem só em Pipa?",
+    a: "Não. Somos uma agência de marketing com base em Praia da Pipa (RN) e atendemos empresas de todo o Brasil de forma remota, pelo WhatsApp e por videochamada.",
+  },
 ];

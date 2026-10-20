@@ -62,11 +62,7 @@ export default async function PostPage({ params }: Props) {
           <p className="lead">{post.summary}</p>
           <p className="article__byline">
             Por{" "}
-            {post.authorUrl ? (
-              <a href={post.authorUrl} target="_blank" rel="noopener author">{post.author}</a>
-            ) : (
-              post.author
-            )}
+{post.author}
           </p>
         </header>
 
@@ -91,10 +87,9 @@ export default async function PostPage({ params }: Props) {
         <aside className="wrap article__end" aria-label="Fale com a Encantos Hub">
           <div className="article__cta">
             <h2>Quer aplicar isso no seu negócio?</h2>
-            <p>A gente faz o diagnóstico da sua presença digital e mostra o que priorizar primeiro.</p>
+            <p>Avaliamos como sua empresa aparece hoje no Google e mostramos o que priorizar primeiro, sem compromisso.</p>
             <div className="hero__actions">
-              <Link className="btn" href="/contato">Pedir um diagnóstico</Link>
-              <a className="btn btn--ghost" href={whatsappLink(`Olá! Li o artigo "${post.title}" e quero conversar.`)} target="_blank" rel="noopener">Falar no WhatsApp</a>
+              <a className="btn" href={whatsappLink(`Olá! Li o artigo "${post.title}" e quero uma avaliação do posicionamento da minha empresa no Google.`)} target="_blank" rel="noopener" data-cta="blog">Pedir avaliação gratuita no WhatsApp</a>
             </div>
           </div>
         </aside>

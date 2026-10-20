@@ -1,32 +1,30 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/ContactForm";
 import { Crumbs } from "@/components/Crumbs";
 import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contato",
-  description: "Fale com a Encantos Hub pelo WhatsApp, e-mail ou formulário e receba um primeiro olhar sobre a presença digital do seu negócio.",
+  title: "Contato pelo WhatsApp",
+  description: "Fale com a Encantos Hub pelo WhatsApp e peça uma avaliação gratuita do posicionamento da sua empresa no Google.",
   alternates: { canonical: "/contato" },
 };
 
 export default function Contato() {
   return (
-    <section className="page-hero">
+    <section className="page-hero contact-page">
       <div className="wrap">
         <Crumbs items={[{ href: "/contato", label: "Contato" }]} />
-        <div className="contact">
-          <div className="contact__aside">
-            <h1>Vamos conversar sobre o seu negócio.</h1>
-            <p className="lead">Conte onde sua marca está hoje e o que você quer alcançar. Respondemos em até um dia útil.</p>
-            <div className="contact__channels">
-              <a href={whatsappLink()} target="_blank" rel="noopener">WhatsApp {site.whatsappDisplay}</a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-              <a href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-            <p>Base em {site.base}. Atendimento remoto em todo o Brasil.</p>
-          </div>
-          <ContactForm />
-        </div>
+        <h1>Fale com a gente pelo WhatsApp.</h1>
+        <p className="lead">
+          Todo o nosso atendimento é pelo WhatsApp. Conte um pouco do seu negócio e avaliamos como sua empresa aparece
+          hoje nas pesquisas do Google, sem compromisso.
+        </p>
+        <p className="hero__actions">
+          <a className="btn btn--big" href={whatsappLink()} target="_blank" rel="noopener" data-cta="contato">
+            Falar no WhatsApp
+          </a>
+        </p>
+        <p className="contact-page__number">{site.whatsappDisplay}</p>
+        <p>Base em {site.base}. Atendimento remoto em todo o Brasil.</p>
       </div>
     </section>
   );

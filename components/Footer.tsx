@@ -36,8 +36,6 @@ export function Footer() {
           <h2 className="footer__title">Fale com a gente</h2>
           <ul>
             <li><a href={whatsappLink()} target="_blank" rel="noopener">WhatsApp {site.whatsappDisplay}</a></li>
-            <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-            <li><a href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
       </div>
