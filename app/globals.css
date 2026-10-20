@@ -116,10 +116,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .hero__proof { margin-top: clamp(48px, 7vw, 88px); display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; color: var(--gray); font-size: 0.95rem; }
 .hero__proof strong { color: var(--ink); font-weight: var(--w-ui); font-size: 1.05rem; }
-.hero__waves path { fill: none; stroke: var(--ocean); stroke-linecap: round; stroke-width: 6; opacity: 0.9; }
-.hero__waves .draw { stroke-dasharray: 1800; stroke-dashoffset: 1800; animation: draw 2.2s cubic-bezier(.6,.05,.25,1) forwards; }
-.hero__waves .draw:nth-of-type(2) { animation-delay: 0.18s; }
-.hero__waves .draw:nth-of-type(3) { animation-delay: 0.36s; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes sun { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
@@ -269,7 +265,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero__waves .draw { animation: none; stroke-dashoffset: 0; }
   .hero__sun { animation: none; opacity: 1; }
 }
 
@@ -360,7 +355,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .article__cta .btn--ghost:hover { background: var(--foam); color: var(--ocean-deep); }
 
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 12px 0 0; }
-.facts > div { background: var(--mist); border-radius: 18px; padding: 18px 20px; }
+.facts > div { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
 .facts dt { font-size: 0.9rem; color: var(--gray); }
 .facts dd { margin: 4px 0 0; font-size: 0.95rem; }
 .facts dd strong { display: block; font-size: 1.6rem; font-weight: var(--w-title); color: var(--ink); letter-spacing: var(--track-title); }
@@ -455,3 +450,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* espaço para o botão não cobrir o fim do rodapé */
 .footer__legal { padding-bottom: 72px; }
 @media (prefers-reduced-motion: reduce) { .wa-float { transition: none; } }
+
+/* Ondas interativas (componente Waves) */
+.waves { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+.waves__line { fill: none; stroke: var(--ocean); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9;
+  stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2s cubic-bezier(.6,.05,.25,1) forwards; }
+.waves__line { stroke-width: 4; }
+@media (min-width: 900px) { .waves__line { stroke-width: 5; } }
+@media (prefers-reduced-motion: reduce) { .waves__line { animation: none; stroke-dashoffset: 0; } }
+
+/* Página Sobre: foto pequena + ondas */
+.page-hero__media { display: grid; gap: 20px; position: relative; }
+.page-hero__media .hero__sun { top: -12px; right: 24px; }
+/* Página de serviço: foto preenche a coluna "Para quem é" */
+.split--media > .prose-block { display: flex; flex-direction: column; gap: 16px; }
+.split__photo { margin: 12px 0 0; flex: 1 1 auto; min-height: 240px; position: relative; }
+.split__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg); background: var(--sky); }
+@media (max-width: 899px) { .split__photo { min-height: 0; aspect-ratio: 4 / 3; } }

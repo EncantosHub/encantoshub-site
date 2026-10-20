@@ -5,6 +5,7 @@ import { FaqList, WhatsAppCta } from "@/components/WhatsAppCta";
 import { cases, homeFaq, services, team } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
+import { Waves } from "@/components/Waves";
 
 const featured = ["consultoria-seo", "gestao-local", "criacao-de-sites", "consultoria"];
 
@@ -13,18 +14,6 @@ const steps = [
   { name: "Plano claro", text: "Você recebe as prioridades em **linguagem simples**: o que fazer primeiro e o que pode esperar." },
   { name: "Execução e acompanhamento", text: "Colocamos o plano em prática e mostramos a **evolução todo mês**, com atualizações pelo WhatsApp." },
 ];
-
-function HeroWaves() {
-  const base = (y: number) =>
-    `M 10 ${y} C 160 ${y - 70}, 320 ${y - 70}, 460 ${y - 18} C 550 ${y + 14}, 630 ${y + 20}, 710 ${y - 6} C 790 ${y - 34}, 880 ${y - 40}, 990 ${y - 16}`;
-  return (
-    <svg className="hero__waves" viewBox="0 0 1000 230" aria-hidden="true">
-      <path className="draw" d={base(80)} />
-      <path className="draw" d={base(140)} />
-      <path className="draw" d={base(200)} />
-    </svg>
-  );
-}
 
 export default function Home() {
   const main = featured.map((slug) => services.find((s) => s.slug === slug)!).filter(Boolean);
@@ -59,7 +48,7 @@ export default function Home() {
               sizes="(min-width: 900px) 420px, 100vw"
               priority
             />
-            <HeroWaves />
+            <Waves className="hero__waves" />
           </figure>
         </div>
       </section>

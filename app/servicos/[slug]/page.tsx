@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaqList, WhatsAppCta } from "@/components/WhatsAppCta";
@@ -30,6 +31,15 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
   if (!s) notFound();
+  // a foto vai na coluna mais curta, para as duas colunas terminarem alinhadas
+  const leftSize = s.forWho.length + (s.facts ? 420 : 0);
+  const rightSize = s.deliverables.reduce((n, d) => n + d.length + 45, 0);
+  const photoLeft = leftSize <= rightSize;
+  const photo = s.photo ? (
+    <figure className="split__photo">
+      <Image src={s.photo.src} alt={s.photo.alt} fill sizes="(min-width: 900px) 520px, 100vw" style={{ objectPosition: s.photo.position }} />
+    </figure>
+  ) : null;
 
   return (
     <>
@@ -47,7 +57,7 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       <section className="section section--paper">
-        <div className="wrap split">
+        <div className="wrap split split--media">
           <div className="prose-block">
             <h2>Para quem é</h2>
             <p><Rich text={s.forWho} /></p>
@@ -63,6 +73,7 @@ export default async function ServicePage({ params }: Props) {
                 ))}
               </dl>
             ) : null}
+            {photoLeft ? photo : null}
           </div>
           <div className="prose-block">
             <h2>O que entregamos</h2>
@@ -71,6 +82,7 @@ export default async function ServicePage({ params }: Props) {
                 <li key={d}>{d}</li>
               ))}
             </ul>
+            {!photoLeft ? photo : null}
           </div>
         </div>
       </section>

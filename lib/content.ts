@@ -10,11 +10,13 @@ export type Service = {
   howItWorks: { step: string; text: string }[];
   faq: { q: string; a: string }[];
   facts?: { label: string; value: string; note: string }[];
+  photo?: { src: string; alt: string; position?: string };
 };
 
 export const services: Service[] = [
   {
     slug: "consultoria-seo",
+    photo: { src: "/fotos/pesquisa-no-google-notebook.webp", alt: "Notebook aberto na página do Google durante o planejamento de uma consultoria de SEO", position: "60% 50%" },
     name: "Consultoria de SEO",
     short: "Para o seu site **aparecer nas pesquisas do Google** e ser citado pelo **ChatGPT, Gemini** e outras IAs.",
     title: "Consultoria de SEO e otimização de sites para aparecer no Google e nas IAs",
@@ -51,6 +53,7 @@ export const services: Service[] = [
   },
   {
     slug: "gestao-local",
+    photo: { src: "/fotos/isabella-e-paloma-em-pipa.webp", alt: "Isabella e Paloma trabalhando nas falésias de Praia da Pipa", position: "50% 70%" },
     name: "Perfil da empresa no Google",
     short: "Sua empresa no topo do mapa quando alguém procura o que você vende perto de você.",
     title: "Consultoria de posicionamento no Google para negócios locais",
@@ -82,6 +85,7 @@ export const services: Service[] = [
   },
   {
     slug: "criacao-de-sites",
+    photo: { src: "/fotos/consultoria-seo-notebook.webp", alt: "Mãos digitando no notebook durante a criação e otimização de um site", position: "50% 45%" },
     name: "Criação de sites",
     short: "Criação e **otimização de sites** rápidos, bonitos e pensados para ranquear e converter.",
     title: "Criação e otimização de sites para SEO",
@@ -112,6 +116,7 @@ export const services: Service[] = [
   },
   {
     slug: "producao-de-conteudo",
+    photo: { src: "/fotos/isa-trabalhando-na-praia.webp", alt: "Isabella escrevendo conteúdo no notebook à beira-mar", position: "50% 55%" },
     name: "Conteúdo e autoridade",
     short: "Conteúdo que responde às buscas e constrói confiança na marca.",
     title: "Produção de conteúdo para SEO e GEO",
@@ -140,6 +145,7 @@ export const services: Service[] = [
   },
   {
     slug: "trafego-pago",
+    photo: { src: "/fotos/pesquisa-no-google-notebook.webp", alt: "Notebook com o Google aberto e caderno com o planejamento de campanhas", position: "70% 50%" },
     name: "Tráfego pago com parceiros",
     short: "Anúncios no Google e nas redes quando a estratégia pede velocidade.",
     title: "Tráfego pago integrado à estratégia de SEO",
@@ -168,6 +174,7 @@ export const services: Service[] = [
   },
   {
     slug: "consultoria",
+    photo: { src: "/fotos/isa-trabalhando-na-praia.webp", alt: "Isabella em uma sessão de consultoria estratégica online pelo notebook", position: "50% 55%" },
     name: "Consultoria estratégica",
     short: "Uma **sessão avulsa de 1h30** para tirar dúvidas e sair com um **plano de ação** para o seu negócio.",
     title: "Consultoria estratégica de marketing digital e SEO",

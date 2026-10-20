@@ -4,6 +4,7 @@ import Image from "next/image";
 import { team } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
+import { Waves } from "@/components/Waves";
 
 export const metadata: Metadata = {
   title: "Sobre a agência",
@@ -23,13 +24,29 @@ export default function Sobre() {
   return (
     <>
       <section className="page-hero">
-        <div className="wrap">
-          <Crumbs items={[{ href: "/sobre", label: "Sobre" }]} />
-          <h1>Onde estratégia, presença digital e impacto se encontram.</h1>
-          <p className="lead">
-            Somos gestoras de marketing que aprofundam, conectam e simplificam. Trocamos processos pesados por soluções
-            inteligentes para ajudar empresas a crescerem no digital de forma leve, estratégica e criativa.
-          </p>
+        <div className="wrap page-hero__split">
+          <div>
+            <Crumbs items={[{ href: "/sobre", label: "Sobre" }]} />
+            <h1>Onde estratégia, presença digital e impacto se encontram.</h1>
+            <p className="lead">
+              Somos gestoras de marketing que aprofundam, conectam e simplificam. Trocamos processos pesados por soluções
+              inteligentes para ajudar empresas a crescerem no digital de forma <strong>leve, estratégica e criativa</strong>.
+            </p>
+          </div>
+          <div className="page-hero__media">
+            <span className="hero__sun" aria-hidden="true" />
+            <figure className="side-photo side-photo--short">
+              <Image
+                src="/fotos/isabella-e-paloma-em-pipa.webp"
+                alt="Isabella Brilha e Paloma Nogueira, fundadoras da Encantos Hub, nas falésias de Praia da Pipa"
+                width={792}
+                height={1196}
+                sizes="(min-width: 900px) 380px, 100vw"
+                priority
+              />
+            </figure>
+            <Waves />
+          </div>
         </div>
       </section>
 
