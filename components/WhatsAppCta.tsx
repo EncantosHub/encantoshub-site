@@ -1,4 +1,4 @@
-import { site, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
 
 /** Bloco final de contato: o único canal é o WhatsApp. */
@@ -24,7 +24,6 @@ export function WhatsAppCta({
           <a className="btn btn--light btn--big" href={whatsappLink(message)} target="_blank" rel="noopener" data-cta="cta-final">
             Falar no WhatsApp
           </a>
-          <p>{site.whatsappDisplay}</p>
         </div>
       </div>
     </section>

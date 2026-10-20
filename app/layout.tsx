@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { ClickTracker } from "@/components/ClickTracker";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="conteudo">{children}</main>
         <Footer />
+        <WhatsAppFloat />
         <JsonLd data={orgSchema} />
         <ClickTracker />
       </body>

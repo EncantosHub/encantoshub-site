@@ -23,7 +23,6 @@ export default function Contato() {
             Falar no WhatsApp
           </a>
         </p>
-        <p className="contact-page__number">{site.whatsappDisplay}</p>
         <p>Base em {site.base}. Atendimento remoto em todo o Brasil.</p>
       </div>
     </section>
