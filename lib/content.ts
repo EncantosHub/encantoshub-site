@@ -15,15 +15,15 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "consultoria-seo",
-    name: "Consultoria SEO",
-    short: "Para o seu site aparecer nas pesquisas do Google e ser citado pelo ChatGPT, Gemini e outras IAs.",
-    title: "Consultoria SEO para aparecer no Google e nas IAs",
+    name: "Consultoria de SEO",
+    short: "Para o seu site **aparecer nas pesquisas do Google** e ser citado pelo **ChatGPT, Gemini** e outras IAs.",
+    title: "Consultoria de SEO e otimização de sites para aparecer no Google e nas IAs",
     metaDescription:
-      "Consultoria SEO e GEO: técnica, conteúdo e autoridade para sua empresa aparecer nas pesquisas do Google e ser citada pelo ChatGPT, Gemini e Perplexity.",
+      "Consultoria de SEO e GEO: otimização de sites, conteúdo e autoridade para sua empresa aparecer nas pesquisas do Google e ser citada pelo ChatGPT, Gemini e Perplexity.",
     intro:
-      "Hoje o cliente pesquisa no Google e também pergunta para uma IA. Na nossa consultoria SEO cuidamos das duas frentes juntas (SEO e GEO): a base técnica do site, as páginas que precisam ranquear, conteúdos que respondem com clareza e a autoridade que faz o Google e as IAs reconhecerem e recomendarem a sua marca.",
+      "Hoje o cliente pesquisa no Google e também pergunta para uma IA. Na nossa **consultoria de SEO** cuidamos das duas frentes juntas (SEO e GEO): a **otimização de sites** na parte técnica, as páginas que precisam ranquear, conteúdos que respondem com clareza e a autoridade que faz o Google e as IAs reconhecerem e recomendarem a sua marca.",
     forWho:
-      "Empresas com site próprio, de pequenos negócios a grandes marcas, que querem depender menos de anúncio, crescer no orgânico e garantir que, quando alguém pede uma recomendação a uma IA no seu segmento ou na sua cidade, o seu nome apareça.",
+      "Empresas com site próprio, de pequenos negócios a grandes marcas, que querem **depender menos de anúncio**, crescer no orgânico e garantir que, quando alguém pede uma recomendação a uma IA no seu segmento ou na sua cidade, o seu nome apareça.",
     deliverables: [
       "Diagnóstico técnico completo: rastreamento, indexação, velocidade e Core Web Vitals",
       "Pesquisa de palavras-chave e mapa de intenção de busca",
@@ -42,9 +42,9 @@ export const services: Service[] = [
       { step: "Medição", text: "Impressões, cliques, posições, conversões e menções nas IAs acompanhados todo mês." },
     ],
     faq: [
-      { q: "Qual a diferença entre SEO e GEO?", a: "SEO trabalha para o seu site aparecer nos resultados do Google. GEO (Generative Engine Optimization) trabalha para a sua marca ser citada e recomendada nas respostas de IAs como ChatGPT, Gemini, Perplexity e as AI Overviews do Google. Os dois se complementam: as IAs se apoiam muito no que já ranqueia bem e em fontes confiáveis." },
-      { q: "Em quanto tempo traz resultado?", a: "Ajustes técnicos e de páginas existentes costumam aparecer em semanas. Crescimento consistente de tráfego orgânico normalmente se consolida entre 4 e 8 meses, dependendo da concorrência e do histórico do domínio." },
-      { q: "Vocês garantem primeira posição no Google ou nas IAs?", a: "Não. Ninguém controla os algoritmos, e quem promete posição garantida está vendendo o que não pode entregar. Garantimos método, transparência e acompanhamento de evolução real." },
+      { q: "Qual a diferença entre SEO e GEO?", a: "SEO trabalha para o seu site aparecer nos resultados do Google. GEO (Generative Engine Optimization) trabalha para a sua marca ser citada e recomendada nas respostas de IAs como **ChatGPT, Gemini**, Perplexity e as AI Overviews do Google. Os dois se complementam: as IAs se apoiam muito no que já ranqueia bem e em fontes confiáveis." },
+      { q: "Em quanto tempo traz resultado?", a: "Ajustes técnicos e de páginas existentes costumam aparecer em semanas. Crescimento consistente de **tráfego orgânico** normalmente se consolida entre **4 e 8 meses**, dependendo da concorrência e do histórico do domínio." },
+      { q: "Vocês garantem primeira posição no Google ou nas IAs?", a: "Não. Ninguém controla os algoritmos, e quem promete posição garantida está vendendo o que não pode entregar. Garantimos **método, transparência e acompanhamento** de evolução real." },
       { q: "Dá para medir resultado de GEO?", a: "Sim, com monitoramento de menções nas principais IAs, tráfego de referência vindo delas e presença nas AI Overviews do Google." },
       { q: "Preciso trocar de site?", a: "Na maioria dos casos, não. Trabalhamos com WordPress, Wix, Shopify, Next.js e outras plataformas. Quando o site limita o crescimento, mostramos o porquê e as alternativas." },
     ],
@@ -57,7 +57,7 @@ export const services: Service[] = [
     metaDescription:
       "Gestão de presença local: Perfil da Empresa no Google (Google Meu Negócio), avaliações, Google Maps, TripAdvisor, Waze, Bing e Apple Maps para negócios regionais.",
     intro:
-      "Para restaurantes, pousadas, clínicas, imobiliárias e comércios, o cliente decide no mapa. Nossa consultoria de posicionamento no Google cuida do perfil da empresa no Google, das avaliações e de todos os canais onde as pessoas procuram negócios perto delas.",
+      "Para restaurantes, pousadas, clínicas, imobiliárias e comércios, **o cliente decide no mapa**. Nossa consultoria de posicionamento no Google cuida do **perfil da empresa no Google**, das avaliações e de todos os canais onde as pessoas procuram negócios perto delas.",
     forWho:
       "Negócios com endereço físico ou área de atendimento definida, de Pipa a qualquer cidade do Brasil, que querem mais ligações, rotas e visitas.",
     deliverables: [
@@ -77,14 +77,14 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Preciso ter site para fazer SEO local?", a: "Não é obrigatório para começar, mas um site com páginas locais bem feitas fortalece muito o perfil no mapa e ajuda a converter quem chega." },
-      { q: "Vocês atendem negócios fora de Pipa?", a: "Sim. Nascemos em Pipa, mas atendemos negócios locais em todo o Brasil, de forma remota." },
+      { q: "Vocês atendem negócios fora de Pipa?", a: "Sim. Nascemos em Pipa, mas atendemos negócios locais em **todo o Brasil**, de forma remota." },
     ],
   },
   {
     slug: "criacao-de-sites",
     name: "Criação de sites",
-    short: "Sites rápidos, bonitos e pensados para ranquear e converter.",
-    title: "Criação de sites otimizados para SEO",
+    short: "Criação e **otimização de sites** rápidos, bonitos e pensados para ranquear e converter.",
+    title: "Criação e otimização de sites para SEO",
     metaDescription:
       "Criação de sites institucionais e landing pages já otimizados para SEO, GEO e conversão, com estrutura técnica correta desde o primeiro dia.",
     intro:
@@ -135,7 +135,7 @@ export const services: Service[] = [
       { step: "Atualização", text: "Revisitamos o que perde posição e o que pode ganhar mais." },
     ],
     faq: [
-      { q: "Vocês usam IA para escrever?", a: "Usamos IA como ferramenta de pesquisa e apoio, mas todo conteúdo passa por estratégia, edição e revisão humana especializada." },
+      { q: "Vocês usam IA para escrever?", a: "Usamos IA como ferramenta de pesquisa e apoio, mas todo conteúdo passa por estratégia, edição e **revisão humana especializada**." },
     ],
   },
   {
@@ -146,7 +146,7 @@ export const services: Service[] = [
     metaDescription:
       "Gestão de tráfego pago em Google Ads e Meta Ads com parceiros especializados, integrada à estratégia orgânica de SEO e presença local.",
     intro:
-      "Nem todo resultado pode esperar o orgânico. Quando a estratégia pede velocidade, acionamos parceiros especializados em Google Ads e Meta Ads e coordenamos tudo para que anúncio e orgânico trabalhem juntos, sem disputar o mesmo clique.",
+      "Nem todo resultado pode esperar o orgânico. Quando a estratégia pede velocidade, acionamos **parceiros especializados** em Google Ads e Meta Ads e coordenamos tudo para que anúncio e orgânico trabalhem juntos, sem disputar o mesmo clique.",
     forWho:
       "Negócios com lançamento, sazonalidade forte ou necessidade de gerar demanda enquanto o SEO amadurece.",
     deliverables: [
@@ -169,7 +169,7 @@ export const services: Service[] = [
   {
     slug: "consultoria",
     name: "Consultoria estratégica",
-    short: "Uma sessão avulsa de 1h30 para tirar dúvidas e sair com um plano de ação para o seu negócio.",
+    short: "Uma **sessão avulsa de 1h30** para tirar dúvidas e sair com um **plano de ação** para o seu negócio.",
     title: "Consultoria estratégica de marketing digital e SEO",
     metaDescription:
       "Sessão avulsa e online de 1h30 com especialista em SEO: diagnóstico pontual do site, respostas às suas dúvidas e plano de ação imediato.",
@@ -197,8 +197,8 @@ export const services: Service[] = [
       { step: "Próximos passos", text: "Você recebe a gravação, o material de apoio e um plano de ação para colocar em prática." },
     ],
     faq: [
-      { q: "Preciso contratar um plano depois da sessão?", a: "Não. A consultoria é avulsa e sem compromisso. Se depois da primeira sessão você quiser, pode contratar um plano estratégico anual, mas isso só é definido depois da conversa inicial." },
-      { q: "A sessão é presencial?", a: "É online, pelo Google Meet, e você recebe a gravação para rever quando quiser." },
+      { q: "Preciso contratar um plano depois da sessão?", a: "Não. A consultoria é avulsa e **sem compromisso**. Se depois da primeira sessão você quiser, pode contratar um **plano estratégico anual**, mas isso só é definido depois da conversa inicial." },
+      { q: "A sessão é presencial?", a: "É online, pelo **Google Meet**, e você recebe a **gravação** para rever quando quiser." },
     ],
   },
 ];
@@ -297,13 +297,15 @@ export const testimonials = [
 export const team = [
   {
     name: "Isabella Brilha",
+    photo: "/fotos/isabella-brilha.webp",
     role: "Cofundadora, especialista em SEO",
-    bio: "Formada em Rádio, TV e Internet, trabalha com marketing digital desde 2016 e é especialista em SEO e presença digital. Já atuou em projetos para marcas como NET, Banco PAN, Loggi e Insper. Conhece Pipa desde 2021, onde apoia empresas locais e projetos sociais.",
+    bio: "Formada em Rádio, TV e Internet, trabalha com marketing digital **desde 2016** e é **especialista em SEO e presença digital**. Já atuou em projetos para marcas como NET, Banco PAN, Loggi e Insper. Conhece Pipa desde 2021, onde apoia empresas locais e projetos sociais.",
   },
   {
     name: "Paloma Nogueira",
+    photo: "/fotos/paloma-nogueira.webp",
     role: "Cofundadora, estrategista digital",
-    bio: "Técnica de Qualidade Digital e consultora de visibilidade online com mais de 10 anos de experiência. Cuida para que cada negócio esteja presente, correto e bem avaliado nos canais certos, além de ter um olhar especialista para design e experiência do usuário.",
+    bio: "Técnica de Qualidade Digital e consultora de visibilidade online com **mais de 10 anos de experiência**. Cuida para que cada negócio esteja presente, correto e bem avaliado nos canais certos, além de ter um olhar especialista para **design e experiência do usuário**.",
   },
 ];
 
@@ -333,22 +335,26 @@ export const plans = [
 export const homeFaq = [
   {
     q: "Como aparecer nas pesquisas do Google?",
-    a: "Comece pelo gratuito: crie e mantenha atualizado o perfil da empresa no Google (antigo Google Meu Negócio), com fotos, horário e avaliações. Depois, tenha um site com páginas que respondem ao que o seu cliente pesquisa. É isso que uma consultoria SEO organiza: o que fazer primeiro, em que ordem e como medir.",
+    a: "Comece pelo gratuito: crie e mantenha atualizado o **perfil da empresa no Google** (antigo Google Meu Negócio), com fotos, horário e avaliações. Depois, tenha um site com páginas que respondem ao que o seu cliente pesquisa. É isso que uma **consultoria SEO** organiza: o que fazer primeiro, em que ordem e como medir.",
   },
   {
     q: "Dá para aparecer no Google de graça?",
-    a: "Sim. O perfil da empresa no Google e o tráfego orgânico do site não custam nada por clique, ao contrário dos anúncios. O investimento está no trabalho de otimização, e o resultado continua mesmo quando você para de pagar mídia.",
+    a: "Sim. O **perfil da empresa no Google** e o **tráfego orgânico** do site não custam nada por clique, ao contrário dos anúncios. O investimento está no trabalho de otimização, e o resultado continua mesmo quando você para de pagar mídia.",
   },
   {
     q: "O que faz uma consultoria SEO?",
-    a: "Analisa como o seu cliente pesquisa, onde a sua marca aparece hoje e o que está impedindo o crescimento. A partir disso, corrige a parte técnica do site, ajusta páginas e conteúdos e acompanha os resultados todo mês. Também trabalhamos o GEO, para sua empresa ser citada pelo ChatGPT, Gemini e outras IAs.",
+    a: "Analisa como o seu cliente pesquisa, onde a sua marca aparece hoje e o que está impedindo o crescimento. A partir disso, corrige a parte técnica do site, ajusta páginas e conteúdos e acompanha os resultados todo mês. Também trabalhamos o GEO, para sua empresa ser citada pelo **ChatGPT, Gemini** e outras IAs.",
+  },
+  {
+    q: "O que é posicionamento digital?",
+    a: "É o lugar que a sua marca ocupa quando alguém procura pelo que você vende: no Google, no mapa, nas redes e nas respostas das IAs. Um bom **posicionamento digital** junta **otimização de sites**, perfil da empresa no Google, conteúdo e reputação para a sua empresa ser encontrada e escolhida.",
   },
   {
     q: "Qual a diferença entre consultoria estratégica e gestão contínua?",
-    a: "A consultoria estratégica é uma sessão avulsa de 1h30 para tirar dúvidas e sair com um plano de ação. A gestão contínua é o acompanhamento mês a mês, em que a agência executa o plano com você.",
+    a: "A consultoria estratégica é uma **sessão avulsa de 1h30** para tirar dúvidas e sair com um **plano de ação**. A gestão contínua é o acompanhamento mês a mês, em que a agência executa o plano com você.",
   },
   {
     q: "Vocês atendem só em Pipa?",
-    a: "Não. Somos uma agência de marketing com base em Praia da Pipa (RN) e atendemos empresas de todo o Brasil de forma remota, pelo WhatsApp e por videochamada.",
+    a: "Não. Somos uma agência de marketing com base em Praia da Pipa (RN) e atendemos empresas de **todo o Brasil** de forma remota, pelo WhatsApp e por videochamada.",
   },
 ];

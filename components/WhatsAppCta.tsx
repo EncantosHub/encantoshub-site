@@ -1,4 +1,5 @@
 import { site, whatsappLink } from "@/lib/site";
+import { Rich } from "@/components/Rich";
 
 /** Bloco final de contato: o único canal é o WhatsApp. */
 export function WhatsAppCta({
@@ -36,7 +37,7 @@ export function FaqList({ items }: { items: { q: string; a: string }[] }) {
       {items.map((f) => (
         <details key={f.q}>
           <summary>{f.q}</summary>
-          <p>{f.a}</p>
+          <p><Rich text={f.a} /></p>
         </details>
       ))}
     </div>

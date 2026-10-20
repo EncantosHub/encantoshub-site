@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Agência de marketing e consultoria SEO | Encantos Hub",
+    default: "Agência de marketing e consultoria de SEO | Encantos Hub",
     template: "%s | Encantos Hub",
   },
   description: site.description,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: site.name,
     url: site.url,
-    title: "Agência de marketing e consultoria SEO | Encantos Hub",
+    title: "Agência de marketing e consultoria de SEO | Encantos Hub",
     description: site.description,
   },
   twitter: { card: "summary_large_image" },
@@ -55,7 +55,7 @@ const orgSchema = {
     { "@type": "Person", name: "Isabella Brilha", jobTitle: "Especialista em SEO" },
     { "@type": "Person", name: "Paloma Nogueira", jobTitle: "Estrategista digital" },
   ],
-  knowsAbout: ["Consultoria SEO", "GEO", "SEO local", "Perfil da empresa no Google", "Consultoria estratégica", "Criação de sites", "Marketing de conteúdo", "Tráfego pago"],
+  knowsAbout: ["Consultoria de SEO", "Otimização de sites", "Posicionamento digital", "GEO", "SEO local", "Perfil da empresa no Google", "Consultoria estratégica", "Criação de sites", "Marketing de conteúdo", "Tráfego pago"],
   sameAs: ["https://www.pipalocal.com.br"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",

@@ -6,6 +6,7 @@ import { Crumbs } from "@/components/Crumbs";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { services } from "@/lib/content";
 import { site, whatsappLink } from "@/lib/site";
+import { Rich } from "@/components/Rich";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -36,7 +37,7 @@ export default async function ServicePage({ params }: Props) {
         <div className="wrap">
           <Crumbs items={[{ href: "/servicos", label: "Serviços" }, { href: `/servicos/${s.slug}`, label: s.name }]} />
           <h1>{s.title}</h1>
-          <p className="lead">{s.intro}</p>
+          <p className="lead"><Rich text={s.intro} /></p>
           <p className="hero__actions">
             <a className="btn" href={whatsappLink(`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`)} target="_blank" rel="noopener" data-cta="servico-topo">
               Falar no WhatsApp
@@ -49,7 +50,7 @@ export default async function ServicePage({ params }: Props) {
         <div className="wrap split">
           <div className="prose-block">
             <h2>Para quem é</h2>
-            <p>{s.forWho}</p>
+            <p><Rich text={s.forWho} /></p>
             {s.facts ? (
               <dl className="facts">
                 {s.facts.map((f) => (

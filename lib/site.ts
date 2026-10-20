@@ -3,7 +3,7 @@ export const site = {
   legalName: "Encantos Hub",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.encantoshub.com.br",
   description:
-    "Agência de marketing especializada em consultoria SEO e GEO. Estratégias de presença digital baseadas em dados para sua empresa aparecer nas pesquisas do Google, no mapa e nas inteligências artificiais.",
+    "Agência de marketing especializada em consultoria de SEO, GEO e otimização de sites. Estratégias de posicionamento digital para sua empresa aparecer nas pesquisas do Google e nas IAs de forma gratuita.",
   tagline: "Estratégia digital, presença local, impacto real",
   whatsappDisplay: "(84) 98624-0202",
   whatsappNumber: "5584986240202",

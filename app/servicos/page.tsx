@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Crumbs } from "@/components/Crumbs";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
 import { services } from "@/lib/content";
+import { Rich } from "@/components/Rich";
 
 export const metadata: Metadata = {
   title: "Serviços: consultoria SEO, perfil da empresa no Google e sites",
@@ -15,10 +17,25 @@ export default function Servicos() {
   return (
     <>
       <section className="page-hero">
-        <div className="wrap">
-          <Crumbs items={[{ href: "/servicos", label: "Serviços" }]} />
-          <h1>Serviços para sua empresa aparecer nas pesquisas do Google.</h1>
-          <p className="lead">Escolha por onde começar. Se não souber, chame no WhatsApp que a gente indica.</p>
+        <div className="wrap page-hero__split">
+          <div>
+            <Crumbs items={[{ href: "/servicos", label: "Serviços" }]} />
+            <h1>Serviços para sua empresa aparecer nas pesquisas do Google.</h1>
+            <p className="lead">
+              Da <strong>consultoria de SEO</strong> à <strong>otimização de sites</strong> e ao perfil da empresa no Google:
+              escolha por onde começar. Se não souber, chame no WhatsApp que a gente indica.
+            </p>
+          </div>
+          <figure className="side-photo side-photo--short">
+            <Image
+              src="/fotos/consultoria-seo-notebook.webp"
+              alt="Mãos digitando no notebook durante uma consultoria de SEO"
+              width={792}
+              height={1196}
+              sizes="(min-width: 900px) 380px, 100vw"
+              priority
+            />
+          </figure>
         </div>
       </section>
 
@@ -29,7 +46,7 @@ export default function Servicos() {
             {services.map((s) => (
               <Link className="service" key={s.slug} href={`/servicos/${s.slug}`}>
                 <h3>{s.name}</h3>
-                <p>{s.short}</p>
+                <p><Rich text={s.short} /></p>
                 <span className="service__more">Saiba mais</span>
               </Link>
             ))}

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Crumbs } from "@/components/Crumbs";
-import { Mark } from "@/components/Logo";
+import Image from "next/image";
 import { team } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
+import { Rich } from "@/components/Rich";
 
 export const metadata: Metadata = {
   title: "Sobre a agência",
   description:
-    "A Encantos Hub é uma agência de marketing digital especializada em SEO e GEO, com base em Praia da Pipa (RN) e clientes em todo o Brasil. Conheça quem está por trás.",
+    "A Encantos Hub é uma agência de marketing especializada em consultoria de SEO, GEO e posicionamento digital, com base em Praia da Pipa (RN) e clientes em todo o Brasil.",
   alternates: { canonical: "/sobre" },
 };
 
@@ -37,16 +38,25 @@ export default function Sobre() {
           <div className="prose-block">
             <h2>O nome</h2>
             <p>
-              As ondas do nosso símbolo falam de leveza, movimento e conexão. O círculo aberto é uma bússola: direção,
-              estratégia e propósito. E o hub é o ponto onde as conexões viram resultado, para a sua marca e para quem ela atende.
+              As <strong>ondas</strong> do nosso símbolo falam de leveza, movimento e conexão. O círculo aberto é uma
+              <strong> bússola</strong>: direção, estratégia e propósito. E o <strong>hub</strong> é o ponto onde as conexões
+              viram resultado, para a sua marca e para quem ela atende.
             </p>
             <p>
-              A Encantos Hub tem base em Praia da Pipa, no Rio Grande do Norte, e atende empresas de todo o Brasil de forma
-              remota. Também mantemos o <a href="https://www.pipalocal.com.br" target="_blank" rel="noopener">Pipa Local</a>,
+              A Encantos Hub tem base em <strong>Praia da Pipa, no Rio Grande do Norte</strong>, e cuida do
+              <strong> posicionamento digital</strong> de empresas de todo o Brasil, de forma remota. Também mantemos o <a href="https://www.pipalocal.com.br" target="_blank" rel="noopener">Pipa Local</a>,
               um guia da região e canal de visibilidade para os negócios da vila.
             </p>
           </div>
-          <Mark className="about-mark" title="Símbolo da Encantos Hub" />
+          <figure className="side-photo">
+            <Image
+              src="/fotos/isa-trabalhando-na-praia.webp"
+              alt="Isabella Brilha trabalhando no notebook à beira-mar em Praia da Pipa"
+              width={792}
+              height={1196}
+              sizes="(min-width: 900px) 460px, 100vw"
+            />
+          </figure>
         </div>
       </section>
 
@@ -58,10 +68,10 @@ export default function Sobre() {
           <div className="team">
             {team.map((p) => (
               <article className="person" key={p.name}>
-                <div className="person__mark" aria-hidden="true">{p.name.split(" ").map((n) => n[0]).join("")}</div>
+                <Image className="person__photo" src={p.photo} alt={`Foto de ${p.name}`} width={218} height={230} />
                 <h3>{p.name}</h3>
                 <p className="person__role">{p.role}</p>
-                <p>{p.bio}</p>
+                <p><Rich text={p.bio} /></p>
               </article>
             ))}
           </div>
