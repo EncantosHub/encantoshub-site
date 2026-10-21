@@ -51,7 +51,7 @@ export default function Sobre() {
       </section>
 
       <section className="section section--paper">
-        <div className="wrap split">
+        <div className="wrap">
           <div className="prose-block">
             <h2>O nome</h2>
             <p>
@@ -65,15 +65,6 @@ export default function Sobre() {
               um guia da região e canal de visibilidade para os negócios da vila.
             </p>
           </div>
-          <figure className="side-photo">
-            <Image
-              src="/fotos/isa-trabalhando-na-praia.webp"
-              alt="Isabella Brilha trabalhando no notebook à beira-mar em Praia da Pipa"
-              width={792}
-              height={1196}
-              sizes="(min-width: 900px) 460px, 100vw"
-            />
-          </figure>
         </div>
       </section>
 
