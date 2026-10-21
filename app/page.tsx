@@ -24,7 +24,7 @@ export default function Home() {
       <section className="hero">
         <div className="wrap hero__grid">
           <div className="hero__text">
-            <h1 className="hero__title">Especialistas em marketing fazendo empresas aparecerem nas pesquisas e IAs de forma gratuita</h1>
+            <h1 className="hero__title">Sua empresa em destaque nas buscas do Google e IAs</h1>
             <p className="hero__lead">
               Criamos estratégias de <strong>posicionamento digital</strong> baseadas em dados para negócios locais,
               nacionais e internacionais. Analisamos como seus clientes pesquisam, onde sua marca aparece e quais
