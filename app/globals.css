@@ -328,7 +328,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .prose ol { list-style: decimal; }
 .prose li + li { margin-top: 0.4em; }
 .prose li::marker { color: var(--ocean); }
-.prose strong, .prose b { color: var(--ink); font-weight: var(--w-ui); }
+.prose strong, .prose b { color: var(--ocean-ink); font-weight: var(--w-ui); }
 .prose a { font-weight: var(--w-ui); }
 .prose img { width: auto; max-width: 100%; height: auto; border-radius: 14px; margin: 1.6em auto; }
 .prose .caption { font-size: 0.9rem; color: var(--gray); text-align: center; margin-top: -0.8em; }

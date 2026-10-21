@@ -191,10 +191,6 @@ export const services: Service[] = [
       "Gravação da sessão",
       "Material de apoio por e-mail",
     ],
-    facts: [
-      { label: "Investimento", value: "R$ 300", note: "por sessão" },
-      { label: "Duração", value: "1h30", note: "sessão online" },
-    ],
     howItWorks: [
       { step: "Agendamento", text: "Você conta um pouco do negócio e das dúvidas, e marcamos o melhor horário." },
       { step: "Auditoria inicial", text: "Antes da conversa, analisamos o site e a presença digital da sua marca." },

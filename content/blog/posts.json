@@ -1,5 +1,43 @@
 [
   {
+    "slug": "como-aparecer-nas-pesquisas-e-nas-ias",
+    "title": "Como aparecer nas pesquisas do Google e nas IAs",
+    "h1": "Como aparecer nas pesquisas do Google e nas IAs",
+    "summary": "Passo a passo para sua empresa aparecer no Google, no mapa e nas respostas do ChatGPT e do Gemini, começando pelo que é gratuito.",
+    "date": "2026-10-21",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": null,
+    "cover": {
+      "src": "/blog/como-aparecer-nas-pesquisas-e-nas-ias/como-aparecer-nas-pesquisas-e-nas-ias.webp",
+      "width": 1600,
+      "height": 1000,
+      "alt": "Notebook aberto na página do Google ao lado de um caderno de planejamento"
+    },
+    "readingMinutes": 3,
+    "hasToc": false
+  },
+  {
+    "slug": "seo-o-que-e",
+    "title": "SEO: o que é e como funciona",
+    "h1": "SEO: o que é, como funciona e por onde começar",
+    "summary": "Entenda o que é SEO, como o Google escolhe quem aparece primeiro, os três pilares da otimização e como começar na sua empresa.",
+    "date": "2026-10-21",
+    "category": "SEO",
+    "categorySlug": "seo",
+    "author": "Isabella Brilha",
+    "authorUrl": null,
+    "cover": {
+      "src": "/blog/seo-o-que-e/seo-o-que-e.webp",
+      "width": 1200,
+      "height": 750,
+      "alt": "Mãos digitando no notebook durante um trabalho de SEO"
+    },
+    "readingMinutes": 3,
+    "hasToc": false
+  },
+  {
     "slug": "como-organizar-categorias-blog",
     "title": "Como organizar as categorias do blog para SEO",
     "h1": "Como organizar as categorias do blog para SEO",
