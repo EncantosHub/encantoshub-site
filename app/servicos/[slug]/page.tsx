@@ -32,7 +32,7 @@ export default async function ServicePage({ params }: Props) {
   const s = services.find((x) => x.slug === slug);
   if (!s) notFound();
   // a foto vai na coluna mais curta, para as duas colunas terminarem alinhadas
-  const leftSize = s.forWho.length + (s.facts ? 420 : 0);
+  const leftSize = s.forWho.length;
   const rightSize = s.deliverables.reduce((n, d) => n + d.length + 45, 0);
   const photoLeft = leftSize <= rightSize;
   const photo = s.photo ? (
@@ -48,6 +48,18 @@ export default async function ServicePage({ params }: Props) {
           <Crumbs items={[{ href: "/servicos", label: "Serviços" }, { href: `/servicos/${s.slug}`, label: s.name }]} />
           <h1>{s.title}</h1>
           <p className="lead"><Rich text={s.intro} /></p>
+          {s.facts ? (
+            <dl className="facts facts--hero">
+              {s.facts.map((f) => (
+                <div key={f.label}>
+                  <dt>{f.label}</dt>
+                  <dd>
+                    <strong>{f.value}</strong> {f.note}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          ) : null}
           <p className="hero__actions">
             <a className="btn" href={whatsappLink(`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`)} target="_blank" rel="noopener" data-cta="servico-topo">
               Falar no WhatsApp
@@ -61,18 +73,6 @@ export default async function ServicePage({ params }: Props) {
           <div className="prose-block">
             <h2>Para quem é</h2>
             <p><Rich text={s.forWho} /></p>
-            {s.facts ? (
-              <dl className="facts">
-                {s.facts.map((f) => (
-                  <div key={f.label}>
-                    <dt>{f.label}</dt>
-                    <dd>
-                      <strong>{f.value}</strong> {f.note}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            ) : null}
             {photoLeft ? photo : null}
           </div>
           <div className="prose-block">

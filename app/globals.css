@@ -467,3 +467,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .split__photo { margin: 12px 0 0; flex: 1 1 auto; min-height: 240px; position: relative; }
 .split__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg); background: var(--sky); }
 @media (max-width: 899px) { .split__photo { min-height: 0; aspect-ratio: 4 / 3; } }
+
+.facts--hero { margin-top: 28px; max-width: 420px; grid-template-columns: 1fr 1fr; }
+.facts--hero + .hero__actions { margin-top: 28px; }

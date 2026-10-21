@@ -174,7 +174,6 @@ export const services: Service[] = [
   },
   {
     slug: "consultoria",
-    photo: { src: "/fotos/isa-trabalhando-na-praia.webp", alt: "Isabella em uma sessão de consultoria estratégica online pelo notebook", position: "50% 55%" },
     name: "Consultoria estratégica",
     short: "Uma **sessão avulsa de 1h30** para tirar dúvidas e sair com um **plano de ação** para o seu negócio.",
     title: "Consultoria estratégica de marketing digital e SEO",
@@ -195,7 +194,6 @@ export const services: Service[] = [
     facts: [
       { label: "Investimento", value: "R$ 300", note: "por sessão" },
       { label: "Duração", value: "1h30", note: "sessão online" },
-      { label: "Modalidade", value: "Avulsa", note: "sem compromisso" },
     ],
     howItWorks: [
       { step: "Agendamento", text: "Você conta um pouco do negócio e das dúvidas, e marcamos o melhor horário." },
