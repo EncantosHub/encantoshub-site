@@ -490,3 +490,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .journey::before { left: 9px; right: auto; top: 9px; bottom: 9px; width: 2px; height: auto; }
   .journey__step, .journey__step:nth-child(2), .journey__step:last-child { grid-template-columns: 20px 1fr; align-items: center; justify-items: start; text-align: left; gap: 14px; }
 }
+
+.sub-h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); margin: 0 0 24px; }
+.wide-photo + .sub-h3 { margin-top: 8px; }

@@ -14,7 +14,7 @@ const journey = ["Precisa ser encontrado", "Precisa ganhar espaço", "Precisa vi
 const steps = [
   { name: "Avaliação gratuita", text: "Vemos como sua empresa aparece hoje **no Google, no mapa e nas IAs**, e o que os concorrentes estão fazendo." },
   { name: "Plano claro", text: "Você recebe as prioridades em **linguagem simples**: o que fazer primeiro e o que pode esperar." },
-  { name: "Execução e acompanhamento", text: "Colocamos o plano em prática e mostramos a **evolução todo mês**, com atualizações pelo WhatsApp." },
+  { name: "Execução e acompanhamento", text: "Colocamos o plano em prática e mostramos a **evolução em relatórios**." },
 ];
 
 export default function Home() {
@@ -81,10 +81,10 @@ export default function Home() {
           <div className="section-head">
             <h2 id="como" className="h2">Como funciona a nossa consultoria de SEO.</h2>
             <p className="lead">
-              Não trabalhamos com pacotes prontos. Criamos <strong>estratégias personalizadas</strong> de acordo com a
-              realidade de cada negócio: o momento da empresa, o público, a concorrência e o que traz resultado mais rápido.
+              Criamos <strong>estratégias personalizadas</strong> de acordo com a realidade de cada negócio.
             </p>
           </div>
+          <h3 className="sub-h3">Avaliamos o momento da sua empresa</h3>
           <figure className="wide-photo wide-photo--journey">
             <Image
               src="/fotos/pesquisa-no-google-notebook.webp"
@@ -102,6 +102,7 @@ export default function Home() {
               ))}
             </ol>
           </figure>
+          <h3 className="sub-h3">Juntos criamos sua estratégia digital</h3>
           <ol className="steps3">
             {steps.map((st, i) => (
               <li key={st.name}>
