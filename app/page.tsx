@@ -9,6 +9,8 @@ import { Waves } from "@/components/Waves";
 
 const featured = ["consultoria-seo", "gestao-local", "criacao-de-sites", "consultoria"];
 
+const journey = ["Precisa ser encontrado", "Precisa ganhar espaço", "Precisa virar autoridade"];
+
 const steps = [
   { name: "Avaliação gratuita", text: "Vemos como sua empresa aparece hoje **no Google, no mapa e nas IAs**, e o que os concorrentes estão fazendo." },
   { name: "Plano claro", text: "Você recebe as prioridades em **linguagem simples**: o que fazer primeiro e o que pode esperar." },
@@ -56,7 +58,7 @@ export default function Home() {
       <section className="section section--paper" aria-labelledby="servicos">
         <div className="wrap">
           <div className="section-head">
-            <h2 id="servicos" className="h2">Como podemos ajudar.</h2>
+            <h2 id="servicos" className="h2">Soluções para acelerar sua visibilidade digital</h2>
           </div>
           <div className="svc-grid">
             {main.map((s) => (
@@ -78,8 +80,12 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2 id="como" className="h2">Como funciona a nossa consultoria de SEO.</h2>
+            <p className="lead">
+              Não trabalhamos com pacotes prontos. Criamos <strong>estratégias personalizadas</strong> de acordo com a
+              realidade de cada negócio: o momento da empresa, o público, a concorrência e o que traz resultado mais rápido.
+            </p>
           </div>
-          <figure className="wide-photo">
+          <figure className="wide-photo wide-photo--journey">
             <Image
               src="/fotos/pesquisa-no-google-notebook.webp"
               alt="Notebook aberto na página do Google ao lado de um caderno de planejamento de SEO"
@@ -87,6 +93,14 @@ export default function Home() {
               height={1062}
               sizes="(min-width: 1180px) 1100px, 100vw"
             />
+            <ol className="journey" aria-label="Momentos do seu negócio">
+              {journey.map((j, n) => (
+                <li key={j} className={n === journey.length - 1 ? "journey__step journey__step--last" : "journey__step"}>
+                  <span className="journey__dot" aria-hidden="true" />
+                  <span className="journey__label">{j}</span>
+                </li>
+              ))}
+            </ol>
           </figure>
           <ol className="steps3">
             {steps.map((st, i) => (
