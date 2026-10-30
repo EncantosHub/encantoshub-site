@@ -512,6 +512,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .case-study__text { display: grid; gap: 18px; align-content: start; }
 .case-study__who { display: flex; align-items: center; gap: 14px; }
 .case-study__logo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--line); background: #fff; }
+.case-study__logo--pad { object-fit: contain; padding: 6px; }
 .case-study__client { font-weight: var(--w-ui); color: var(--ink); font-size: 1.05rem; }
 .case-study__segment { font-size: 0.92rem; color: var(--gray); }
 .case-study__title { font-size: clamp(1.7rem, 3.2vw, 2.4rem); max-width: 22ch; }

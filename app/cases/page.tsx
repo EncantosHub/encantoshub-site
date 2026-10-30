@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Rich } from "@/components/Rich";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
 import { builtSites, caseStudies, headline } from "@/lib/cases";
-import { otherProjects, testimonials } from "@/lib/content";
+import { testimonials } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function Cases() {
         const who = (
           <>
             <div className="case-study__who">
-              {c.logo ? <Image className="case-study__logo" src={c.logo.src} alt={c.logo.alt} width={64} height={64} /> : null}
+              {c.logo ? <Image className={`case-study__logo ${c.logo.pad ? "case-study__logo--pad" : ""}`} src={c.logo.src} alt={c.logo.alt} width={64} height={64} /> : null}
               <div>
                 <p className="case-study__client">{c.client}</p>
                 <p className="case-study__segment">{c.segment}</p>
@@ -95,13 +95,13 @@ export default function Cases() {
             className={`section case-study ${i % 2 === 0 ? "section--paper" : ""}`}
             aria-labelledby={`${c.slug}-titulo`}
           >
-            {c.wide ? (
+            {c.wide || c.images.length === 0 ? (
               <div className="wrap">
                 <div className="case-study__wide">
                   <div className="case-study__text">{who}</div>
                   <div className="case-study__text">{story}</div>
                 </div>
-                <div className="case-study__media case-study__media--wide">{media}</div>
+                {c.images.length ? <div className="case-study__media case-study__media--wide">{media}</div> : null}
               </div>
             ) : (
               <div className={`wrap case-study__grid ${i % 2 === 1 ? "case-study__grid--flip" : ""}`}>
@@ -116,7 +116,7 @@ export default function Cases() {
         );
       })}
 
-      <section id="sites" className="section section--paper" aria-labelledby="sites-titulo">
+      <section id="sites" className="section" aria-labelledby="sites-titulo">
         <div className="wrap">
           <div className="section-head section-head--split">
             <h2 id="sites-titulo" className="h2">Sites que criamos.</h2>
@@ -139,24 +139,6 @@ export default function Cases() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="outros">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="outros" className="h2">Outros projetos.</h2>
-          </div>
-          <div className="more-projects more-projects--light">
-            {otherProjects
-              .filter((p) => p.client !== "Casas Bahia")
-              .map((p) => (
-                <div key={p.client}>
-                  <h3>{p.client}</h3>
-                  <p>{p.text}</p>
-                </div>
-              ))}
-          </div>
         </div>
       </section>
 

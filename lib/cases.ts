@@ -8,7 +8,7 @@ export type CaseStudy = {
   summary: string; // aceita **negrito**
   actions: string[];
   images: { src: string; width: number; height: number; alt: string; caption?: string; contain?: boolean }[];
-  logo?: { src: string; width: number; height: number; alt: string };
+  logo?: { src: string; width: number; height: number; alt: string; pad?: boolean };
   wide?: boolean; // imagem de resultado em largura total, abaixo do texto
 };
 
@@ -171,6 +171,43 @@ export const caseStudies: CaseStudy[] = [
         alt: "Aplicativo das Casas Bahia aberto no celular em frente ao site no computador",
       },
     ],
+  },
+  {
+    slug: "insper",
+    client: "Insper",
+    segment: "Educação · treinamento de equipe",
+    site: { url: "https://www.insper.edu.br/", label: "insper.edu.br" },
+    title: "Treinamento para o time do Insper sobre SEO para vídeos",
+    metrics: [
+      { value: "+157%", label: "de tráfego orgânico em páginas com vídeo, comparado a páginas só com texto" },
+    ],
+    summary:
+      "Realizamos treinamentos especializados para a equipe de produção do **Insper Educação**, mostrando o impacto do conteúdo em vídeo, que aumenta o tráfego orgânico em **157%** em comparação com páginas apenas com texto. Também desenvolvemos **web stories** para levar mais tráfego às páginas de cursos e artigos, ampliando o alcance e o engajamento dos conteúdos educacionais.",
+    actions: [
+      "Treinamento de SEO para vídeos com a equipe de produção",
+      "Criação de web stories para páginas de cursos e artigos",
+    ],
+    logo: { src: "/cases/insper-logo.webp", width: 200, height: 200, alt: "Logo do Insper", pad: true },
+    images: [],
+  },
+  {
+    slug: "loggi",
+    client: "Loggi",
+    segment: "Logística · diagnóstico de SEO",
+    site: { url: "https://www.loggi.com/", label: "loggi.com" },
+    title: "Diagnóstico de SEO completo para a Loggi",
+    metrics: [
+      { value: "360°", label: "análise técnica, de conteúdo, links e SEO local" },
+    ],
+    summary:
+      "Realizamos uma análise abrangente para a **Loggi**, cobrindo todos os aspectos críticos de SEO: configurações do site, rastreamento, indexação e estratégias **on-page, off-page, locais e técnicas**.",
+    actions: [
+      "Auditoria de configurações do site, rastreamento e indexação",
+      "Análise das estratégias on-page e off-page",
+      "Recomendações de SEO local e técnico",
+    ],
+    logo: { src: "/cases/loggi-logo.webp", width: 214, height: 200, alt: "Logo da Loggi", pad: true },
+    images: [],
   },
   {
     slug: "seo-local",
