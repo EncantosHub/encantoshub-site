@@ -4,7 +4,8 @@ import { Crumbs } from "@/components/Crumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { Rich } from "@/components/Rich";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
-import { builtSites, caseStudies, headline } from "@/lib/cases";
+import { builtSites, caseCarousel, caseStudies, headline } from "@/lib/cases";
+import { CaseCarousel } from "@/components/CaseCarousel";
 import { testimonials } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -34,12 +35,7 @@ export default function Cases() {
               </li>
             ))}
           </ul>
-          <nav className="cat-nav case-index" aria-label="Ir para um case">
-            {caseStudies.map((c) => (
-              <a key={c.slug} href={`#${c.slug}`}>{c.client.split(" / ")[0].replace("SEO local para mais de 100 empresas", "SEO local")}</a>
-            ))}
-            <a href="#sites">Sites criados</a>
-          </nav>
+          <CaseCarousel items={caseCarousel} />
         </div>
       </section>
 

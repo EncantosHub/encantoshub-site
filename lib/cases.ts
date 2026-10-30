@@ -278,3 +278,26 @@ export const headline = [
   { value: "+278%", label: "impressões · imobiliária em Pipa" },
   { value: "100+", label: "empresas com SEO local" },
 ];
+
+export type CarouselItem = {
+  href: string;
+  name: string;
+  logo?: string;
+  logoDark?: boolean;
+  icon?: "pin" | "browser";
+  value: string;
+  label: string;
+};
+
+export const caseCarousel: CarouselItem[] = [
+  { href: "#ludmila-abreu", name: "Ludmila Abreu Imóveis", logo: "/cases/logos/ludmila-abreu.webp", value: "+278%", label: "impressões no Google" },
+  { href: "#grupo-amazonas", name: "Grupo Amazonas", logo: "/cases/logos/grupo-amazonas.webp", value: "1,08 mi", label: "impressões no Google" },
+  { href: "#sociedade-da-mesa", name: "Sociedade da Mesa", logo: "/cases/logos/chez-france.webp", logoDark: true, value: "+1.634%", label: "tráfego orgânico" },
+  { href: "#banco-pan", name: "Banco PAN", logo: "/cases/logos/banco-pan.webp", value: "+1.141%", label: "tráfego orgânico" },
+  { href: "#net-claro", name: "NET (Claro)", logo: "/cases/logos/net-claro.webp", value: "+200%", label: "ligações pelo site" },
+  { href: "#casas-bahia", name: "Casas Bahia", logo: "/cases/logos/casas-bahia.webp", value: "Mobile", label: "conteúdo para o app" },
+  { href: "#insper", name: "Insper", logo: "/cases/logos/insper.webp", value: "+157%", label: "tráfego com vídeos" },
+  { href: "#loggi", name: "Loggi", logo: "/cases/logos/loggi.webp", value: "360°", label: "diagnóstico de SEO" },
+  { href: "#seo-local", name: "SEO local", icon: "pin", value: "100+", label: "empresas atendidas" },
+  { href: "#sites", name: "Sites criados", icon: "browser", value: "4", label: "sites no ar" },
+];
