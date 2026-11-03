@@ -69,11 +69,6 @@ export default function Cases() {
                 <li key={a}>{a}</li>
               ))}
             </ul>
-            {c.site ? (
-              <p className="case-study__site">
-                <a href={c.site.url} target="_blank" rel="noopener">Ver o site: {c.site.label}</a>
-              </p>
-            ) : null}
           </>
         );
         const media = c.images.map((img) => (
