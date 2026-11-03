@@ -228,14 +228,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     images: [
       {
-        src: "/cases/seo-local-resultado-perfil-da-empresa.webp",
-        width: 1134,
-        height: 1066,
-        alt: "Estatísticas do perfil da empresa no Google do Hygge Café: 362 interações, 3.734 visualizações e 1.695 pesquisas",
-        caption: "Perfil da empresa no Google do Hygge Café, setembro.",
-        contain: true,
-      },
-      {
         src: "/cases/seo-local-perfil-da-empresa-no-google.webp",
         width: 1200,
         height: 680,
