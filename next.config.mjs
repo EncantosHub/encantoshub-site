@@ -10,6 +10,7 @@ const nextConfig = {
       { source: "/servicos/geo", destination: "/servicos/consultoria-seo", permanent: true },
       { source: "/servicos/seo-e-geo", destination: "/servicos/consultoria-seo", permanent: true },
       { source: "/descubra-seu-plano", destination: "/servicos", permanent: true },
+      { source: "/sobre", destination: "/", permanent: true },
       { source: "/ferramentas/:path*", destination: "/blog", permanent: false },
       { source: "/blog/o-que-e-hiperlink", destination: "/blog/guia-hiperlink", permanent: true },
       { source: "/blog/seo-o-que-e", destination: "/blog", permanent: false },

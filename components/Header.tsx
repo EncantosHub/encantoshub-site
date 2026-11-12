@@ -6,7 +6,6 @@ const nav = [
   { href: "/servicos", label: "Serviços" },
   { href: "/cases", label: "Cases" },
   { href: "/blog", label: "Blog" },
-  { href: "/sobre", label: "Sobre" },
 ];
 
 function Links() {
