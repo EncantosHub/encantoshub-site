@@ -153,9 +153,8 @@ export default function Cases() {
       </section>
 
       <WhatsAppCta
-        title="Quer resultados assim na sua empresa?"
-        text="Chame a gente no WhatsApp. Fazemos uma avaliação gratuita de como sua empresa aparece hoje no Google e mostramos o primeiro passo."
-        message="Olá! Vi os cases no site da Encantos Hub e quero resultados assim para a minha empresa."
+        title="Quer resultados assim? Agende uma reunião de diagnóstico."
+        message="Olá! Vi os cases no site da Encantos Hub e quero agendar uma reunião de diagnóstico de SEO."
       />
 
       <JsonLd

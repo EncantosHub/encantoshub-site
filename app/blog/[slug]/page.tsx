@@ -87,9 +87,9 @@ export default async function PostPage({ params }: Props) {
         <aside className="wrap article__end" aria-label="Fale com a Encantos Hub">
           <div className="article__cta">
             <h2>Quer aplicar isso no seu negócio?</h2>
-            <p>Avaliamos como sua empresa aparece hoje no Google e mostramos o que priorizar primeiro, sem compromisso.</p>
+            <p>Agende uma reunião de diagnóstico: entendemos o seu negócio e montamos um projeto de SEO sob medida para a sua empresa.</p>
             <div className="hero__actions">
-              <a className="btn" href={whatsappLink(`Olá! Li o artigo "${post.title}" e quero uma avaliação do posicionamento da minha empresa no Google.`)} target="_blank" rel="noopener" data-cta="blog">Pedir avaliação gratuita no WhatsApp</a>
+              <a className="btn" href={whatsappLink(`Olá! Li o artigo "${post.title}" e quero agendar uma reunião de diagnóstico de SEO.`)} target="_blank" rel="noopener" data-cta="blog">Agendar reunião de diagnóstico</a>
             </div>
           </div>
         </aside>

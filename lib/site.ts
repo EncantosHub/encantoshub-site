@@ -11,6 +11,6 @@ export const site = {
   areaServed: "Brasil",
 };
 
-export function whatsappLink(text = "Olá! Vim pelo site da Encantos Hub e quero uma avaliação do posicionamento da minha empresa no Google.") {
+export function whatsappLink(text = "Olá! Vim pelo site da Encantos Hub e quero agendar uma reunião de diagnóstico de SEO.") {
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(text)}`;
 }

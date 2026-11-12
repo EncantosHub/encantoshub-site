@@ -1,10 +1,10 @@
 import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
 
-/** Bloco final de contato: o único canal é o WhatsApp. */
+/** Bloco final de todas as páginas: convite para agendar a reunião de diagnóstico (pelo WhatsApp). */
 export function WhatsAppCta({
-  title = "Quer sua empresa aparecendo no Google?",
-  text = "Chame a gente no WhatsApp. Avaliamos como sua empresa aparece hoje nas pesquisas e mostramos o primeiro passo, sem compromisso.",
+  title = "Agende uma reunião de diagnóstico.",
+  text = "Conversamos sobre o seu negócio, o seu mercado e os recursos que você já tem, e montamos um projeto de SEO sob medida para a sua empresa.",
   message,
   headingId = "fale",
 }: {
@@ -22,8 +22,9 @@ export function WhatsAppCta({
         </div>
         <div className="cta-band__actions">
           <a className="btn btn--light btn--big" href={whatsappLink(message)} target="_blank" rel="noopener" data-cta="cta-final">
-            Falar no WhatsApp
+            Agendar reunião de diagnóstico
           </a>
+          <p className="cta-band__note">O agendamento é feito pelo WhatsApp.</p>
         </div>
       </div>
     </section>

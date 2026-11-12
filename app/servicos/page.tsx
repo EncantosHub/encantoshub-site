@@ -3,27 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { Crumbs } from "@/components/Crumbs";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
+import { Pillars, TailorMade } from "@/components/Pillars";
 import { services } from "@/lib/content";
 import { Rich } from "@/components/Rich";
 
 export const metadata: Metadata = {
-  title: "Serviços: consultoria SEO, perfil da empresa no Google e sites",
+  title: "Serviços: consultoria de SEO personalizada, setup inicial e criação de sites",
   description:
-    "Serviços da Encantos Hub, agência de marketing: consultoria SEO e GEO, perfil da empresa no Google, criação de sites, conteúdo, tráfego pago com parceiros e consultoria estratégica.",
+    "Consultoria de SEO personalizada: reunião de diagnóstico, setup inicial ou criação de site e plano mensal de 2 a 5 artigos, acompanhando 5 pilares de crescimento no Google e nas IAs.",
   alternates: { canonical: "/servicos" },
 };
 
 export default function Servicos() {
+  const principal = services.filter((s) => s.group !== "complementar");
+  const extra = services.filter((s) => s.group === "complementar");
   return (
     <>
       <section className="page-hero">
         <div className="wrap page-hero__split">
           <div>
             <Crumbs items={[{ href: "/servicos", label: "Serviços" }]} />
-            <h1>Serviços para sua empresa aparecer nas pesquisas do Google.</h1>
+            <h1>Consultoria de SEO personalizada para o seu negócio.</h1>
             <p className="lead">
-              Da <strong>consultoria de SEO</strong> à <strong>otimização de sites</strong> e ao perfil da empresa no Google:
-              escolha por onde começar. Se não souber, chame no WhatsApp que a gente indica.
+              Não trabalhamos com pacote fechado. Começamos com uma <strong>reunião de diagnóstico</strong>, fazemos o{" "}
+              <strong>setup inicial</strong> do seu site ou criamos um novo e seguimos com um <strong>plano mensal</strong>{" "}
+              montado para o seu mercado e para os recursos que você já tem.
             </p>
           </div>
           <figure className="side-photo side-photo--short">
@@ -41,9 +45,11 @@ export default function Servicos() {
 
       <section className="section section--paper" aria-labelledby="lista">
         <div className="wrap">
-          <h2 id="lista" className="sr-only">Lista de serviços</h2>
+          <div className="section-head">
+            <h2 id="lista" className="h2">Como montamos o seu projeto.</h2>
+          </div>
           <div className="services">
-            {services.map((s) => (
+            {principal.map((s) => (
               <Link className="service" key={s.slug} href={`/servicos/${s.slug}`}>
                 <h3>{s.name}</h3>
                 <p><Rich text={s.short} /></p>
@@ -54,7 +60,37 @@ export default function Servicos() {
         </div>
       </section>
 
-      <WhatsAppCta title="Não sabe por onde começar?" text="Conte um pouco do seu negócio no WhatsApp. Avaliamos como sua empresa aparece hoje no Google e indicamos o serviço certo para o seu momento." />
+      <section className="section" aria-labelledby="pilares">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 id="pilares" className="h2">Os 5 pilares que acompanhamos.</h2>
+            <p className="lead">
+              Do setup ao plano mensal, todo o trabalho é guiado por cinco frentes que medimos e melhoramos continuamente.
+            </p>
+          </div>
+          <Pillars />
+          <TailorMade />
+        </div>
+      </section>
+
+      <section className="section section--paper" aria-labelledby="complementares">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 id="complementares" className="h2">Serviços complementares.</h2>
+          </div>
+          <div className="services">
+            {extra.map((s) => (
+              <Link className="service" key={s.slug} href={`/servicos/${s.slug}`}>
+                <h3>{s.name}</h3>
+                <p><Rich text={s.short} /></p>
+                <span className="service__more">Saiba mais</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <WhatsAppCta />
     </>
   );
 }

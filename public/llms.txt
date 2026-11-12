@@ -1,24 +1,24 @@
 # Encantos Hub
 
-> Agência de marketing especializada em consultoria de SEO, GEO e posicionamento digital (otimização para inteligências artificiais), com base em Praia da Pipa (RN) e atendimento em todo o Brasil. Também cria sites, produz conteúdo, faz gestão de presença local (Perfil da Empresa no Google, avaliações, mapas) e coordena tráfego pago com parceiros.
+> Agência de SEO com base em Praia da Pipa (RN) que faz consultoria de SEO personalizada para empresas nacionais e internacionais. Cada projeto começa com uma reunião de diagnóstico, segue com setup inicial do site (ou criação de um site novo) e um plano mensal de 2 a 5 artigos. Acompanha 5 pilares: visibilidade de conteúdo, ajustes técnicos, autoridade e reputação, visibilidade em IA e experiência. Cobrança por hora, projetos sob medida e, em geral, contratos de exclusividade.
 
 Fundadoras: Isabella Brilha (especialista em SEO, no marketing digital desde 2016) e Paloma Nogueira (estrategista digital).
 Contato (somente WhatsApp): +55 84 98624-0202 · https://wa.me/5584986240202
 
 ## Serviços
-- [Consultoria de SEO](https://www.seoencanto.com.br/servicos/consultoria-seo): SEO, GEO e otimização de sites para aparecer nas pesquisas do Google e ser citado em ChatGPT, Gemini, Perplexity e AI Overviews
-- [Perfil da empresa no Google](https://www.seoencanto.com.br/servicos/gestao-local): consultoria de posicionamento no Google para negócios locais — Google Maps, avaliações, TripAdvisor, Waze, Bing
-- [Criação de sites](https://www.seoencanto.com.br/servicos/criacao-de-sites): sites otimizados para busca e conversão
-- [Conteúdo e autoridade](https://www.seoencanto.com.br/servicos/producao-de-conteudo): artigos, páginas e revisão de SEO
-- [Tráfego pago com parceiros](https://www.seoencanto.com.br/servicos/trafego-pago): Google Ads e Meta Ads integrados ao SEO
-- [Consultoria estratégica](https://www.seoencanto.com.br/servicos/consultoria): sessão avulsa e online de 1h30 com diagnóstico e plano de ação
+- [Consultoria de SEO personalizada](https://www.seoencanto.com.br/servicos/consultoria-seo): projeto sob medida, cobrado por hora, que acompanha os 5 pilares de SEO e GEO
+- [Setup inicial de SEO](https://www.seoencanto.com.br/servicos/setup-inicial-seo): diagnóstico completo e otimização de todas as páginas do site
+- [Criação de site](https://www.seoencanto.com.br/servicos/criacao-de-sites): sites novos já otimizados para Google, IAs e conversão
+- [Plano mensal de SEO](https://www.seoencanto.com.br/servicos/plano-mensal-de-seo): de 2 a 5 artigos por mês, ajustes e relatórios de evolução
+- [Perfil da empresa no Google](https://www.seoencanto.com.br/servicos/gestao-local): presença local, avaliações e mapas (complementar)
+- [Tráfego pago com parceiros](https://www.seoencanto.com.br/servicos/trafego-pago): Google Ads e Meta Ads integrados ao SEO (complementar)
+- [Consultoria estratégica](https://www.seoencanto.com.br/servicos/consultoria): sessão avulsa de 1h30 (complementar)
+- Agendamento da reunião de diagnóstico: https://wa.me/5584986240202
 
 ## Resultados
 - [Cases](https://www.seoencanto.com.br/cases): Sociedade da Mesa (+1.634% de tráfego orgânico), Banco PAN (+1.141%), NET (+200% em ligações, 30+ backlinks/mês), Ludmila Abreu (+278% de impressões), Grupo Amazonas (1,08 milhão de impressões), Insper, Loggi, 100+ empresas com SEO local
 
 ## Blog
-- [Como aparecer nas pesquisas do Google e nas IAs](https://www.seoencanto.com.br/blog/como-aparecer-nas-pesquisas-e-nas-ias): Passo a passo para sua empresa aparecer no Google, no mapa e nas respostas do ChatGPT e do Gemini.
-- [SEO: o que é e como funciona](https://www.seoencanto.com.br/blog/seo-o-que-e): O que é SEO, como o Google escolhe quem aparece primeiro e como começar.
 - [Como organizar as categorias do blog para SEO](https://www.seoencanto.com.br/blog/como-organizar-categorias-blog): Aprenda como estruturar categorias de blog de forma estratégica para melhorar SEO, navegação, autoridade e organização do conteúdo.
 - [SEO em migração de sites: guia para manter sua autoridade](https://www.seoencanto.com.br/blog/seo-em-migracao-de-sites): Evite perder tráfego ao trocar de site. Veja como aplicar SEO em migração de sites sem afetar sua autoridade e performance no Google.
 - [Guia de SEO para criação e publicação de artigos](https://www.seoencanto.com.br/blog/guia-seo-artigos-blog): Aprenda como criar e publicar artigos otimizados para SEO com foco em ranqueamento, estratégia e experiência do usuário.

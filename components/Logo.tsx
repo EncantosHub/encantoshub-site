@@ -31,7 +31,7 @@ export function Logo({ tone = "default" }: { tone?: "default" | "light" }) {
       <Mark className="logo__mark" stroke={light ? "var(--foam)" : "var(--ocean)"} />
       <span className="logo__type">
         <span className="logo__word">encantos</span>
-        <span className="logo__hub">HUB</span>
+        <span className="logo__hub">HUB <span className="logo__seo">SEO</span></span>
       </span>
     </span>
   );

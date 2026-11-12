@@ -18,7 +18,7 @@ function Links() {
         </Link>
       ))}
       <a className="btn btn--small" href={whatsappLink()} target="_blank" rel="noopener">
-        Falar no WhatsApp
+        Agendar reunião
       </a>
     </>
   );

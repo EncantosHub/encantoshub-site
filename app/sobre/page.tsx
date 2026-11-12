@@ -100,7 +100,7 @@ export default function Sobre() {
             ))}
           </div>
           <p style={{ marginTop: 56 }}>
-            <a className="btn" href={whatsappLink()} target="_blank" rel="noopener" data-cta="sobre">Falar no WhatsApp</a>
+            <a className="btn" href={whatsappLink()} target="_blank" rel="noopener" data-cta="sobre">Agendar reunião de diagnóstico</a>
           </p>
         </div>
       </section>

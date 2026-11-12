@@ -6,15 +6,16 @@ import { cases, homeFaq, services, team } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
 import { Waves } from "@/components/Waves";
+import { Pillars, TailorMade } from "@/components/Pillars";
 
-const featured = ["consultoria-seo", "gestao-local", "criacao-de-sites", "consultoria"];
+const featured = ["setup-inicial-seo", "criacao-de-sites", "plano-mensal-de-seo"];
 
 const journey = ["Precisa ser encontrado", "Precisa ganhar espaço", "Precisa virar autoridade"];
 
 const steps = [
-  { name: "Avaliação gratuita", text: "Vemos como sua empresa aparece hoje **no Google, no mapa e nas IAs**, e o que os concorrentes estão fazendo." },
-  { name: "Plano claro", text: "Você recebe as prioridades em **linguagem simples**: o que fazer primeiro e o que pode esperar." },
-  { name: "Execução e acompanhamento", text: "Colocamos o plano em prática e mostramos a **evolução em relatórios**." },
+  { name: "Reunião de diagnóstico", text: "Entendemos o seu negócio, o seu mercado e os **recursos que você já tem**." },
+  { name: "Setup inicial ou criação de site", text: "Otimizamos **todas as páginas** do site atual ou criamos um site novo, já preparado para o Google e as IAs." },
+  { name: "Plano mensal", text: "De **2 a 5 artigos por mês**, ajustes contínuos e a **evolução em relatórios**." },
 ];
 
 export default function Home() {
@@ -34,11 +35,11 @@ export default function Home() {
             </p>
             <div className="hero__actions">
               <a className="btn btn--big" href={whatsappLink()} target="_blank" rel="noopener" data-cta="hero">
-                Pedir avaliação gratuita
+                Agendar reunião de diagnóstico
               </a>
               <Link className="btn btn--ghost btn--big" href="/servicos">Ver serviços</Link>
             </div>
-            <p className="hero__note">Avaliação gratuita do posicionamento da sua empresa no Google, pelo WhatsApp e sem compromisso.</p>
+            <p className="hero__note">Uma conversa para entender o seu negócio e montar um projeto de SEO sob medida.</p>
           </div>
           <figure className="hero__media">
             <span className="hero__sun" aria-hidden="true" />
@@ -59,8 +60,13 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2 id="servicos" className="h2">Soluções para acelerar sua visibilidade digital</h2>
+            <p className="lead">
+              Fazemos uma <Link href="/servicos/consultoria-seo">consultoria de SEO personalizada</Link>: o projeto começa
+              pelo <strong>setup inicial</strong> ou pela <strong>criação do site</strong> e segue com um{" "}
+              <strong>plano mensal</strong> feito para o seu mercado.
+            </p>
           </div>
-          <div className="svc-grid">
+          <div className="svc-grid svc-grid--3">
             {main.map((s) => (
               <Link className="svc-card" key={s.slug} href={`/servicos/${s.slug}`}>
                 <h3>{s.name}</h3>
@@ -70,8 +76,9 @@ export default function Home() {
             ))}
           </div>
           <p className="svc-also">
-            Também produzimos <Link href="/servicos/producao-de-conteudo">conteúdo para blogs e sites</Link> e, quando a
-            estratégia pede, ativamos <Link href="/servicos/trafego-pago">parceiros de tráfego pago</Link>.
+            Também cuidamos do <Link href="/servicos/gestao-local">perfil da empresa no Google</Link>, coordenamos{" "}
+            <Link href="/servicos/trafego-pago">parceiros de tráfego pago</Link> e fazemos{" "}
+            <Link href="/servicos/consultoria">sessões de consultoria estratégica</Link>.
           </p>
         </div>
       </section>
@@ -112,6 +119,20 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section section--paper" aria-labelledby="pilares">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 id="pilares" className="h2">Os 5 pilares que acompanhamos.</h2>
+            <p className="lead">
+              Em todo projeto medimos e melhoramos cinco frentes. É assim que o site ganha <strong>mais cliques, mais
+              impressões e mais posicionamento</strong> com constância.
+            </p>
+          </div>
+          <Pillars />
+          <TailorMade />
         </div>
       </section>
 

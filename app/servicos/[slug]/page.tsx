@@ -8,6 +8,7 @@ import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { services } from "@/lib/content";
 import { site, whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
+import { Pillars, TailorMade } from "@/components/Pillars";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,8 +62,8 @@ export default async function ServicePage({ params }: Props) {
             </dl>
           ) : null}
           <p className="hero__actions">
-            <a className="btn" href={whatsappLink(`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`)} target="_blank" rel="noopener" data-cta="servico-topo">
-              Falar no WhatsApp
+            <a className="btn" href={whatsappLink(`Olá! Vim pelo site da Encantos Hub e quero agendar uma reunião de diagnóstico sobre ${s.name}.`)} target="_blank" rel="noopener" data-cta="servico-topo">
+              Agendar reunião de diagnóstico
             </a>
           </p>
         </div>
@@ -104,7 +105,19 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="section section--paper" aria-labelledby="duvidas">
+      {s.pillars ? (
+        <section className="section section--paper" aria-labelledby="pilares">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 id="pilares" className="h2">Os 5 pilares que acompanhamos.</h2>
+            </div>
+            <Pillars />
+            <TailorMade />
+          </div>
+        </section>
+      ) : null}
+
+      <section className={`section ${s.pillars ? "" : "section--paper"}`} aria-labelledby="duvidas">
         <div className="wrap">
           <div className="section-head">
             <h2 id="duvidas" className="h2">Dúvidas comuns.</h2>
@@ -113,10 +126,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      <WhatsAppCta
-        title="Quer saber se faz sentido para o seu negócio?"
-        message={`Olá! Vim pelo site da Encantos Hub e quero saber mais sobre ${s.name}.`}
-      />
+      <WhatsAppCta message={`Olá! Vim pelo site da Encantos Hub e quero agendar uma reunião de diagnóstico sobre ${s.name}.`} />
 
       <JsonLd
         data={[
