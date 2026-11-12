@@ -1,15 +1,12 @@
 # Encantos Hub
 
-> Agência de SEO com base em Praia da Pipa (RN) que faz consultoria de SEO personalizada para empresas nacionais e internacionais. Cada projeto começa com uma reunião de diagnóstico, segue com setup inicial do site (ou criação de um site novo) e um plano mensal de 2 a 5 artigos. Acompanha 5 pilares: visibilidade de conteúdo, ajustes técnicos, autoridade e reputação, visibilidade em IA e experiência. Cobrança por hora, projetos sob medida e, em geral, contratos de exclusividade.
+> Agência de SEO com base em Praia da Pipa (RN) que faz consultoria de SEO personalizada para empresas nacionais e internacionais. Cada projeto começa com uma reunião de diagnóstico, segue com setup inicial do site (ou criação de um site novo) e um plano personalizado e constante. Acompanha 5 pilares: visibilidade de conteúdo, ajustes técnicos, autoridade e reputação, visibilidade em IA e experiência. Cobrança por hora, projetos sob medida e, em geral, contratos de exclusividade.
 
 Fundadoras: Isabella Brilha (especialista em SEO, no marketing digital desde 2016) e Paloma Nogueira (estrategista digital).
 Contato (somente WhatsApp): +55 84 98624-0202 · https://wa.me/5584986240202
 
 ## Serviços
-- [Consultoria de SEO personalizada](https://www.seoencanto.com.br/servicos/consultoria-seo): projeto sob medida, cobrado por hora, que acompanha os 5 pilares de SEO e GEO
-- [Setup inicial de SEO](https://www.seoencanto.com.br/servicos/setup-inicial-seo): diagnóstico completo e otimização de todas as páginas do site
-- [Criação de site](https://www.seoencanto.com.br/servicos/criacao-de-sites): sites novos já otimizados para Google, IAs e conversão
-- [Plano mensal de SEO](https://www.seoencanto.com.br/servicos/plano-mensal-de-seo): de 2 a 5 artigos por mês, ajustes e relatórios de evolução
+- [Consultoria de SEO personalizada](https://www.seoencanto.com.br/servicos): reunião de diagnóstico, setup inicial ou criação de site e plano personalizado, acompanhando os 5 pilares de SEO e GEO. Cobrança por hora.
 - [Perfil da empresa no Google](https://www.seoencanto.com.br/servicos/gestao-local): presença local, avaliações e mapas (complementar)
 - [Tráfego pago com parceiros](https://www.seoencanto.com.br/servicos/trafego-pago): Google Ads e Meta Ads integrados ao SEO (complementar)
 - [Consultoria estratégica](https://www.seoencanto.com.br/servicos/consultoria): sessão avulsa de 1h30 (complementar)

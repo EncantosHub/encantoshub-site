@@ -14,7 +14,10 @@ const nextConfig = {
       { source: "/blog/o-que-e-hiperlink", destination: "/blog/guia-hiperlink", permanent: true },
       { source: "/blog/seo-o-que-e", destination: "/blog", permanent: false },
       { source: "/blog/como-aparecer-nas-pesquisas-e-nas-ias", destination: "/blog", permanent: false },
-      { source: "/servicos/producao-de-conteudo", destination: "/servicos/plano-mensal-de-seo", permanent: true },
+      { source: "/servicos/producao-de-conteudo", destination: "/servicos", permanent: true },
+      { source: "/servicos/plano-mensal-de-seo", destination: "/servicos", permanent: true },
+      { source: "/servicos/setup-inicial-seo", destination: "/servicos", permanent: true },
+      { source: "/servicos/criacao-de-sites", destination: "/servicos", permanent: true },
     ];
   },
   async headers() {

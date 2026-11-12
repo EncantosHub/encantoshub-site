@@ -2,24 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { FaqList, WhatsAppCta } from "@/components/WhatsAppCta";
-import { cases, homeFaq, services, team } from "@/lib/content";
+import { cases, consultoriaFlow, homeFaq, team } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 import { Rich } from "@/components/Rich";
 import { Waves } from "@/components/Waves";
 import { Pillars, TailorMade } from "@/components/Pillars";
 
-const featured = ["setup-inicial-seo", "criacao-de-sites", "plano-mensal-de-seo"];
-
-const journey = ["Precisa ser encontrado", "Precisa ganhar espaço", "Precisa virar autoridade"];
 
 const steps = [
-  { name: "Reunião de diagnóstico", text: "Entendemos o seu negócio, o seu mercado e os **recursos que você já tem**." },
+  consultoriaFlow.meeting,
   { name: "Setup inicial ou criação de site", text: "Otimizamos **todas as páginas** do site atual ou criamos um site novo, já preparado para o Google e as IAs." },
-  { name: "Plano mensal", text: "De **2 a 5 artigos por mês**, ajustes contínuos e a **evolução em relatórios**." },
+  consultoriaFlow.plan,
 ];
 
+const solutions = [consultoriaFlow.setup, consultoriaFlow.site, consultoriaFlow.plan];
+
 export default function Home() {
-  const main = featured.map((slug) => services.find((s) => s.slug === slug)!).filter(Boolean);
   const topCases = cases.slice(0, 3);
 
   return (
@@ -63,15 +61,15 @@ export default function Home() {
             <p className="lead">
               Fazemos uma <Link href="/servicos/consultoria-seo">consultoria de SEO personalizada</Link>: o projeto começa
               pelo <strong>setup inicial</strong> ou pela <strong>criação do site</strong> e segue com um{" "}
-              <strong>plano mensal</strong> feito para o seu mercado.
+              <strong>plano personalizado</strong> para o seu mercado.
             </p>
           </div>
           <div className="svc-grid svc-grid--3">
-            {main.map((s) => (
-              <Link className="svc-card" key={s.slug} href={`/servicos/${s.slug}`}>
+            {solutions.map((s) => (
+              <Link className="svc-card" key={s.name} href="/servicos">
                 <h3>{s.name}</h3>
-                <p><Rich text={s.short} /></p>
-                <span className="svc-card__more">Saiba mais</span>
+                <p><Rich text={s.text} /></p>
+                <span className="svc-card__more">Como funciona</span>
               </Link>
             ))}
           </div>
@@ -91,24 +89,6 @@ export default function Home() {
               Criamos <strong>estratégias personalizadas</strong> de acordo com a realidade de cada negócio.
             </p>
           </div>
-          <h3 className="sub-h3">Avaliamos o momento da sua empresa</h3>
-          <figure className="wide-photo wide-photo--journey">
-            <Image
-              src="/fotos/pesquisa-no-google-notebook.webp"
-              alt="Notebook aberto na página do Google ao lado de um caderno de planejamento de SEO"
-              width={1600}
-              height={1062}
-              sizes="(min-width: 1180px) 1100px, 100vw"
-            />
-            <ol className="journey" aria-label="Momentos do seu negócio">
-              {journey.map((j, n) => (
-                <li key={j} className={n === journey.length - 1 ? "journey__step journey__step--last" : "journey__step"}>
-                  <span className="journey__dot" aria-hidden="true" />
-                  <span className="journey__label">{j}</span>
-                </li>
-              ))}
-            </ol>
-          </figure>
           <h3 className="sub-h3">Juntos criamos sua estratégia digital</h3>
           <ol className="steps3">
             {steps.map((st, i) => (

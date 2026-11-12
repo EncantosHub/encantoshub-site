@@ -12,6 +12,7 @@ export type Service = {
   facts?: { label: string; value: string; note: string }[];
   photo?: { src: string; alt: string; position?: string };
   group?: "principal" | "complementar";
+  thumb?: { src: string; alt: string };
   pillars?: boolean; // mostra os 5 pilares na página
 };
 
@@ -44,6 +45,14 @@ export const pillars = [
   },
 ];
 
+/** Etapas da consultoria personalizada (Home e Serviços). */
+export const consultoriaFlow = {
+  meeting: { name: "Reunião de diagnóstico", text: "Entendemos o seu negócio, o seu mercado e os **recursos que você já tem**." },
+  setup: { name: "Setup inicial", text: "Para quem já tem site: otimizamos **todas as páginas** a partir dos 5 pilares." },
+  site: { name: "Criação de site", text: "Para quem vai **começar do zero**: um site novo, já preparado para o Google e as IAs." },
+  plan: { name: "Plano personalizado", text: "Acompanhamento **constante**, montado para o seu mercado, com a **evolução em relatórios**." },
+};
+
 export const services: Service[] = [
   {
     slug: "consultoria-seo",
@@ -51,10 +60,10 @@ export const services: Service[] = [
     pillars: true,
     photo: { src: "/fotos/pesquisa-no-google-notebook.webp", alt: "Notebook aberto na página do Google durante o planejamento de uma consultoria de SEO", position: "60% 50%" },
     name: "Consultoria de SEO personalizada",
-    short: "Um **projeto de SEO sob medida**: começamos pelo diagnóstico e seguimos com um plano mensal feito para o seu mercado.",
+    short: "Um **projeto de SEO sob medida**: começamos pelo diagnóstico e seguimos com um plano personalizado para o seu mercado.",
     title: "Consultoria de SEO personalizada para aparecer no Google e nas IAs",
     metaDescription:
-      "Consultoria de SEO personalizada: diagnóstico, setup inicial ou criação de site e plano mensal, acompanhando conteúdo, parte técnica, autoridade, visibilidade em IA e experiência.",
+      "Consultoria de SEO personalizada: reunião de diagnóstico, setup inicial ou criação de site e plano personalizado, acompanhando conteúdo, parte técnica, autoridade, visibilidade em IA e experiência.",
     intro:
       "Não vendemos pacote fechado. Cada projeto começa com uma **reunião de diagnóstico** para entender o seu mercado, os recursos que você já tem e onde estão as oportunidades. A partir disso montamos um **plano de SEO personalizado**, cobrado por hora, que acompanha os **5 pilares** que fazem uma empresa aparecer no Google e nas IAs.",
     forWho:
@@ -63,7 +72,7 @@ export const services: Service[] = [
       "Reunião de diagnóstico para entender o negócio, o mercado e os recursos atuais",
       "Setup inicial de SEO no site que você já tem, ou criação de um site novo",
       "Otimização de todas as páginas a partir dos 5 pilares",
-      "Plano mensal com 2 a 5 artigos, de acordo com o seu mercado",
+      "Plano personalizado e constante, com conteúdo e ajustes definidos para o seu mercado",
       "Monitoramento técnico, de autoridade e de citações em IAs",
       "Relatórios de evolução com cliques, impressões e posicionamento",
     ],
@@ -71,7 +80,7 @@ export const services: Service[] = [
       { step: "Reunião de diagnóstico", text: "Conversamos sobre o seu negócio, a concorrência e os recursos que você já tem." },
       { step: "Proposta sob medida", text: "Montamos o projeto e as horas de acordo com o que o seu site precisa." },
       { step: "Setup ou criação de site", text: "Ajustamos todas as páginas do site atual ou criamos um site novo já otimizado." },
-      { step: "Plano mensal", text: "Conteúdo, ajustes e monitoramento dos 5 pilares, com relatórios de evolução." },
+      { step: "Plano personalizado", text: "Conteúdo, ajustes e monitoramento dos 5 pilares, com relatórios de evolução." },
     ],
     faq: [
       { q: "Quanto custa a consultoria de SEO?", a: "Cobramos **por hora** e montamos o projeto de acordo com o mercado, o tamanho do site e os recursos que você já tem. Por isso a primeira etapa é sempre uma **reunião de diagnóstico**: é nela que definimos o escopo e o investimento." },
@@ -82,108 +91,11 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "setup-inicial-seo",
-    group: "principal",
-    pillars: true,
-    photo: { src: "/fotos/consultoria-seo-notebook.webp", alt: "Mãos digitando no notebook durante o setup inicial de SEO de um site", position: "50% 45%" },
-    name: "Setup inicial de SEO",
-    short: "Diagnóstico completo e **otimização de todas as páginas** do seu site atual, a partir dos nossos 5 pilares.",
-    title: "Setup inicial de SEO: diagnóstico e otimização completa do site",
-    metaDescription:
-      "Setup inicial de SEO: diagnóstico completo do site e otimização de todas as páginas em conteúdo, parte técnica, autoridade, visibilidade em IA e experiência.",
-    intro:
-      "Para quem já tem site, o projeto começa pelo **setup inicial**. Fazemos um diagnóstico completo e ajustamos **todas as páginas** para ficarem otimizadas nos 5 pilares: conteúdo, parte técnica, autoridade, visibilidade em IA e experiência. É a base que prepara o site para crescer com o plano mensal.",
-    forWho:
-      "Empresas que já têm um site, mas não aparecem bem no Google, perderam posições ou nunca tiveram um trabalho de SEO bem feito.",
-    deliverables: [
-      "Diagnóstico completo do site e da concorrência",
-      "Pesquisa de palavras-chave e mapa das páginas prioritárias",
-      "Otimização de títulos, descrições, textos e estrutura de todas as páginas",
-      "Correções técnicas: rastreamento, indexação, velocidade e segurança",
-      "Dados estruturados (Schema.org) e arquivo llms.txt para as IAs",
-      "Auditoria de backlinks e da reputação da marca",
-      "Configuração de Google Search Console e Google Analytics",
-    ],
-    howItWorks: [
-      { step: "Diagnóstico", text: "Analisamos o site, a concorrência e como a marca aparece no Google e nas IAs." },
-      { step: "Prioridades", text: "Organizamos o que corrigir primeiro, por impacto e esforço." },
-      { step: "Otimização", text: "Ajustamos página por página, da parte técnica ao conteúdo." },
-      { step: "Ponto de partida", text: "Registramos as métricas iniciais para medir a evolução no plano mensal." },
-    ],
-    faq: [
-      { q: "Quanto tempo leva o setup inicial?", a: "Depende do tamanho do site e do estado em que ele está. Definimos o prazo e as horas na **reunião de diagnóstico**, antes de começar." },
-      { q: "Preciso contratar o plano mensal depois?", a: "É o mais indicado, porque SEO precisa de **constância** para crescer. Mas o escopo é sempre combinado com você." },
-    ],
-  },
-  {
-    slug: "criacao-de-sites",
-    group: "principal",
-    photo: { src: "/fotos/isabella-e-paloma-em-pipa.webp", alt: "Isabella e Paloma trabalhando no notebook durante a criação de um site", position: "50% 70%" },
-    name: "Criação de site",
-    short: "Para quem vai **começar do zero**: um site rápido, bonito e pronto para aparecer no Google desde o primeiro dia.",
-    title: "Criação de sites otimizados para SEO",
-    metaDescription:
-      "Criação de sites institucionais já otimizados para SEO, IAs e conversão, com estrutura técnica correta desde o primeiro dia.",
-    intro:
-      "Quando a empresa não tem site, ou o site atual limita o crescimento, o projeto começa pela **criação do site**. Ele já nasce otimizado nos 5 pilares: páginas pensadas a partir das buscas, código limpo, carregamento rápido, dados estruturados e caminhos claros para virar contato.",
-    forWho:
-      "Empresas sem site, com site desatualizado ou com um site bonito que não aparece em lugar nenhum.",
-    deliverables: [
-      "Arquitetura de páginas a partir da pesquisa de palavras-chave",
-      "Design responsivo alinhado à identidade da marca",
-      "Textos de páginas com foco em busca e conversão",
-      "SEO técnico: metatags, sitemap, Schema.org e velocidade",
-      "Integração com WhatsApp, formulários e Google Analytics",
-      "Hospedagem moderna e de baixo custo, com domínio próprio",
-    ],
-    howItWorks: [
-      { step: "Reunião de diagnóstico", text: "Entendemos o negócio, o público e como ele pesquisa." },
-      { step: "Estrutura e textos", text: "Definimos páginas, hierarquia e conteúdo antes do visual." },
-      { step: "Design e desenvolvimento", text: "Montamos o site com a sua identidade e revisamos juntos." },
-      { step: "Publicação", text: "Configuramos domínio, Search Console e analytics e seguimos com o plano mensal." },
-    ],
-    faq: [
-      { q: "Quanto tempo leva para o site ficar pronto?", a: "Um site institucional de uma a cinco páginas costuma levar de **duas a quatro semanas**, dependendo da agilidade nas aprovações e no envio de materiais." },
-      { q: "Consigo editar o site depois?", a: "Sim. Escolhemos a tecnologia de acordo com quem vai manter o site e entregamos orientação para atualizações simples." },
-    ],
-  },
-  {
-    slug: "plano-mensal-de-seo",
-    group: "principal",
-    pillars: true,
-    photo: { src: "/fotos/isa-trabalhando-na-praia.webp", alt: "Isabella escrevendo conteúdo no notebook à beira-mar", position: "50% 55%" },
-    name: "Plano mensal de SEO",
-    short: "Constância para crescer: **2 a 5 artigos por mês**, ajustes e acompanhamento dos 5 pilares.",
-    title: "Plano mensal de SEO com produção de conteúdo",
-    metaDescription:
-      "Plano mensal de SEO: de 2 a 5 artigos por mês, ajustes técnicos e acompanhamento de cliques, impressões, autoridade e citações em IAs.",
-    intro:
-      "Depois do setup ou da criação do site, o crescimento vem da **constância**. No plano mensal produzimos conteúdo, fazemos ajustes e acompanhamos os 5 pilares todo mês. A quantidade de artigos, **de 2 a 5 por mês**, depende do seu mercado, dos seus recursos atuais e da nossa capacidade de entrega com qualidade.",
-    forWho:
-      "Empresas que querem crescer no orgânico mês a mês, com um time especialista cuidando do conteúdo e da saúde do site.",
-    deliverables: [
-      "Calendário editorial guiado por palavras-chave e perguntas reais",
-      "De 2 a 5 artigos por mês, escritos e otimizados para SEO e IAs",
-      "Atualização de páginas e conteúdos que perdem posição",
-      "Monitoramento técnico, de autoridade e de citações em IAs",
-      "Relatório de evolução com cliques, impressões e posicionamento",
-    ],
-    howItWorks: [
-      { step: "Pauta", text: "Levantamos o que o seu público pesquisa e o que já existe no site." },
-      { step: "Produção", text: "Escrevemos com briefing claro, revisão especializada e checklist de SEO." },
-      { step: "Publicação", text: "Links internos, dados estruturados e otimização para as IAs." },
-      { step: "Acompanhamento", text: "Medimos os 5 pilares e ajustamos a estratégia todo mês." },
-    ],
-    faq: [
-      { q: "Quantos artigos por mês eu preciso?", a: "Depende da concorrência do seu mercado, dos recursos que você já tem e do momento do site. Normalmente trabalhamos de **2 a 5 artigos por mês** e definimos isso na **reunião de diagnóstico**." },
-      { q: "Vocês usam IA para escrever?", a: "Usamos IA como ferramenta de pesquisa e apoio, mas todo conteúdo passa por estratégia, edição e **revisão humana especializada**." },
-    ],
-  },
-  {
     slug: "gestao-local",
     group: "complementar",
     photo: { src: "/fotos/isabella-e-paloma-em-pipa.webp", alt: "Isabella e Paloma trabalhando nas falésias de Praia da Pipa", position: "50% 70%" },
     name: "Perfil da empresa no Google",
+    thumb: { src: "/cases/seo-local-perfil-da-empresa-no-google.webp", alt: "Celular mostrando o perfil da empresa no Google" },
     short: "Sua empresa no topo do mapa quando alguém procura o que você vende perto de você.",
     title: "Consultoria de posicionamento no Google para negócios locais",
     metaDescription:
@@ -217,6 +129,7 @@ export const services: Service[] = [
     group: "complementar",
     photo: { src: "/fotos/pesquisa-no-google-notebook.webp", alt: "Notebook com o Google aberto e caderno com o planejamento de campanhas", position: "70% 50%" },
     name: "Tráfego pago com parceiros",
+    thumb: { src: "/fotos/pesquisa-no-google-notebook.webp", alt: "Notebook com a página de pesquisa do Google" },
     short: "Anúncios no Google e nas redes quando a estratégia pede velocidade.",
     title: "Tráfego pago integrado à estratégia de SEO",
     metaDescription:
@@ -246,6 +159,7 @@ export const services: Service[] = [
     slug: "consultoria",
     group: "complementar",
     name: "Consultoria estratégica",
+    thumb: { src: "/fotos/isabella-e-paloma-em-pipa.webp", alt: "Isabella e Paloma, da Encantos Hub, trabalhando no notebook" },
     short: "Uma **sessão avulsa de 1h30** para tirar dúvidas e sair com um **plano de ação** para o seu negócio.",
     title: "Consultoria estratégica de marketing digital e SEO",
     metaDescription:
@@ -426,8 +340,8 @@ export const homeFaq = [
     a: "Cada projeto é **personalizado**. Cobramos **por hora** e montamos o escopo de acordo com o seu mercado, o tamanho do site e os recursos que você já tem. Por isso o primeiro passo é uma **reunião de diagnóstico**, onde definimos juntos o projeto e o investimento.",
   },
   {
-    q: "Como é o plano mensal?",
-    a: "Depois do **setup inicial** ou da **criação do site**, seguimos com um plano mensal: de **2 a 5 artigos por mês**, ajustes técnicos e acompanhamento de cliques, impressões, autoridade, citações em IAs e experiência do site.",
+    q: "Como funciona o plano personalizado?",
+    a: "Depois do **setup inicial** ou da **criação do site**, seguimos com um plano constante e personalizado. A frequência de conteúdo e os ajustes são definidos para o seu mercado, e acompanhamos todo mês cliques, impressões, autoridade, citações em IAs e a experiência do site.",
   },
   {
     q: "Vocês atendem só em Pipa?",

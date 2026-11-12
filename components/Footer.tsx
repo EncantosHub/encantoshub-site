@@ -10,7 +10,7 @@ export function Footer() {
         <div className="footer__brand">
           <Logo tone="light" />
           <p className="footer__tagline">{site.tagline}.</p>
-          <p className="footer__base">Base em {site.base}. Atendimento em todo o Brasil.</p>
+          <p className="footer__base">Base em {site.base}. Atendemos empresas nacionais e internacionais.</p>
         </div>
         <nav aria-label="Serviços">
           <h2 className="footer__title">Serviços</h2>
