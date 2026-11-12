@@ -1,7 +1,7 @@
 export const site = {
   name: "Encantos Hub",
   legalName: "Encantos Hub",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.encantoshub.com.br",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.seoencanto.com.br",
   description:
     "Agência de marketing especializada em consultoria de SEO, GEO e otimização de sites. Estratégias de posicionamento digital para sua empresa aparecer nas pesquisas do Google e nas IAs de forma gratuita.",
   tagline: "Estratégia digital, presença local, impacto real",
